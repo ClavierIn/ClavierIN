@@ -1,17 +1,15 @@
-
-
-    <div class="nav">
+ <div class="nav">
         <div class="bar">
-            <div class="left">
-            <div class="btn-menu" id="btn-menu">
+            <div class="box-enu">
+            <div class="box-menu" id="tm-menu">
                 <div class="line-1"></div>
                 <div class="line-2"></div>
                 <div class="line-3"></div>
             </div>
+            </div>
             <div class="logo">
                 <span>CLAVIER</span>
             </div>
-        </div>
         <div class="link">
             <a href="#">Home</a>
             <a href="#">Project</a>
@@ -56,7 +54,7 @@
                 <div class="box-link" ">
                     <div class="text">
                         <object type="image/svg+xml" data="assets/icon/psychology.svg" width="20" height="20"></object>
-                        <span>My Ai</span>
+                        <span>Porfotolio</span>
                     </div>
                 </div>
                 <div class="box-link" onclick="dropDown(this)">
@@ -198,3 +196,4 @@
              
             </div>
 
+    <script src="assets/js/navbar/script.js"></script>
