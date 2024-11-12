@@ -13,7 +13,7 @@ body {
 :root {
     /*--- color/bar ---*/
     --nav-bar-bg-color: rgb(47, 46, 53);
-    --nav-bar-main-color:;
+    --nav-bar-main-color:rgb(86, 139, 255);
     --nav-bar-text-color: #fff;
 
     --nav-bar-logo-color:rgb(77, 124, 255);
@@ -26,12 +26,12 @@ body {
 
     /*--- color / scroll ---*/
     --nav-scrl-indikator-bg-color: gray;
-    --nav-scrl-indikator-main-color: rgb(86, 139, 255);
+    --nav-scrl-indikator-main-color: rgb(66, 103, 227);
 
 
     /*--- color / menu --*/
     --nav-menu-background-color: rgb(52, 52, 56);
-    --nav-menu-main-color: rgb(62, 137, 228);
+    --nav-menu-main-color: rgb(34, 111, 205);
 
     --nav-menu-cont-account-background-color: ;
     --nav-menu-cont-account-main-color:;
@@ -44,6 +44,18 @@ body {
 
 }
 
+/*--- ANIMATION --*/
+@keyframes FadeIn {
+    from {
+        opacity: 0.1;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /*---- END (SETTING) -----*/
 /*----= (NAV) =----*/
 .nav {
@@ -52,6 +64,7 @@ body {
     top: 0;
     left: 0;
     background-color: var(--nav-bar-bg-color);
+
 
 }
 /*----= NAV / (BAR) =----*/
@@ -62,37 +75,77 @@ body {
     top: 0;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: ;
 
-    padding-left:15px;
     width: 100%;
     height: 90px;
     background-color: var(--nav-bar-bg-color);
+    animation: FadeIn 0.3s ease-in-out ;
+   
 }
 
-/*---= BAR / (LEFT) =---*/
+@keyframes barAnimation {
+    from {
+        opacity: 0.1;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*---= BAR / (LEFT) =---
 .nav .bar .left {
     cursor:pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10%;
+    padding: 2px;
 }
+    */
 /*---= BAR / LEFT / (TM MENU) =---*/
-.nav .bar .left .btn-menu {
+.nav .bar .box-menu::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -10px;
+    left: -20px;
+
+    width: 155%;
+    height: 150%;
+    opacity: 0;
+    transform: rotate(-40deg);
+    background-color: var(--nav-scrl-indikator-main-color);
+    border: 0;
+    box-shadow: 0;
+    outline: 0;
+    transition: 0.2s;
+    transition-delay: 0.3s ;
+}
+.nav .bar .box-menu {
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
     gap: 6px;
+    align-items: center;
+    justify-content: center;
 
-    height: 60px ;
+
     width: 60px;
+    height: 100%;
+    padding: 20px;
     overflow: hidden;
+ 
+  
 }
-.nav .bar .left .btn-menu .line-1,
-.nav .bar .left .btn-menu .line-2,
-.nav .bar .left .btn-menu .line-3{
+.nav .bar .box-menu:hover::before{
+    opacity: 1;
+}
+
+.nav .bar .box-menu .line-1,
+.nav .bar .box-menu .line-2,
+.nav .bar .box-menu .line-3{
  height: 3px;
  width: 30px;
  background-color: var(--nav-bar-text-color);
@@ -101,33 +154,77 @@ body {
 .clicked {
   position: relative;
 }
-.nav .bar .left .clicked .line-1{
+.nav .bar .clicked::before {
+    opacity: 1;
+}
+
+.nav .bar .clicked .line-1{
     position: absolute;
     transform: rotate(55deg);
+    transition: 0.2s;
 }
-.nav .bar .left .clicked .line-2 {
+.nav .bar .clicked .line-3 {
     position: absolute;
     transform: rotate(-55deg);
+    transition: 0.1s linear;
 }
-.nav .bar .left .clicked .line-3{
-    display: none;
+.nav .bar .clicked .line-2{
+    opacity: 0;
 }
 /*---- [END] LEFT/ (TM MENU) */
 /*--- NAV/LEFT / (LOGO) ---*/
-.nav .bar .left span{
+@keyframes logo {
+    0%,100%{
+        background-position: left 0 bottom 0px;
+    }
+    70% {
+        background-position: left 180px bottom -60px;
+    }
+    80% {
+        background-position: left 160px bottom -40px;
+    }
+    100%,0%{
+        background-position: left 0px bottom 0px;
+    }
+}
+
+.nav .bar .logo {
+    align-self: center;
+    margin-left: 15px;
+}
+
+.nav .bar .logo span{
+    position: relative;
     font-family: monospace;
     font-weight: 600;
     font-size: 30px;
-    color: var(--nav-bar-logo-color);
+    color: transparent;
+    
+    background-image: url('../../image/navbar/logo.png');
+    background-color: gray;
+    background-repeat: repeat-x;
+    background-size: 100%;
+    -webkit-background-clip: text;
+
+    background-position: left 0px bottom -20px;
+    overflow: hidden;
+
+    animation:  logo 4s linear infinite;
 }
+
+
 /*---  [END] NAV/LEFT / (LOGO) ----*/
  /*--- [END] NAVBAR/ (LEFT) ---*/
 
 /*---= NAVBVAR / (LINK) =----*/
 .nav .bar .link {
+  
 
-    align-self: center;
+    justify-self: ;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
     gap: 20px;
 }
 /*---- LINK / a ----*/
@@ -149,6 +246,7 @@ body {
 /*---= [END] NABRAR / (LINK) =--*/
 /*---= NAVBAR / (ICON) =---*/
 .nav .bar .icon{
+    align-self: flex-end;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -203,6 +301,7 @@ body {
     width: 100%;
     border: px solid;
     background-color: var(--nav-scrl-indikator-bg-color);
+    animation: barAnimation 0.3s ease-in-out ;
 }
 .scroll-indikator .indikator {
 
@@ -219,7 +318,7 @@ body {
 }
 .nav .menu {
     position: fixed;
-    z-index: 10 ;
+    z-index: 10;
     top: 90px;
     left: -400px;
 
@@ -230,7 +329,7 @@ body {
     width: 220px;
     background-color: var(--nav-menu-background-color);
     transition: 0.2s linear;
-    border-top: 5px solid rgb(71, 79, 94);
+    border-top: 5px solid var(--nav-scrl-indikator-main-color);
 }
 
 
@@ -407,6 +506,7 @@ body {
 
 
 .nav .container-search {
+    z-index: 10;
     position: fixed;
     top: 90px;
     left: 0;
@@ -596,3 +696,69 @@ body {
     padding: 4px;
     color: #696969;
 } 
+
+
+@media (max-width: 900px){
+    .nav .bar {
+        height: 90px;
+        z-index: 9;
+    }
+
+    .nav .bar .logo {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    .nav .bar .logo span {
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 1;
+    }
+
+    .nav .bar .link {
+
+        position: fixed;
+        top: 94px;
+        left: 0;
+
+        display: flex;
+        align-items: normal;
+        justify-content: normal;
+        gap: 5px;
+
+
+        width: 100%;
+        height: 45px;
+        background-color: #484848;
+
+        overflow: scroll;
+    }
+    .nav .bar .link a{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        border-radius: 0;
+        border-right: 2px solid #444444;
+    }
+    
+}
+
+@media (max-width: 400px){
+    .nav .menu {
+        width: 100%;
+    }
+
+    .nav .menu .cont-account {
+        grid-template-columns: 30% 40%;
+    }
+
+    .nav .menu .cont-link .box-link .text{
+        height: 60px;
+    }
+    .nav .menu .cont-link .box-link .text svg {
+        width: 20px;
+        height: 20px;
+    }
+}
