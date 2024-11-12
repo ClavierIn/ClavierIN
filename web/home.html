@@ -16,7 +16,7 @@
 </head>
 <body>
     
-     <?php include 'navbar.php'; ?>
+     <div id="navbar-container"></div>
     
     <div class="content">
     <div class="sliderShow-container">
@@ -56,6 +56,10 @@
         </div>
         </div>
     </div>
-  
+    <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar-container').innerHTML = data);
+    </script>
 </body>
 </html>
