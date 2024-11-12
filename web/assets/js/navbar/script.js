@@ -1,7 +1,7 @@
 
 //menu
 let menu = document.getElementById('menu')
-document.getElementById('btn-menu').onclick = function() {
+document.getElementById('tm-menu').onclick = function() {
     this.classList.toggle('clicked'); // Toggle the 'clicked' class
 
     menu.classList.toggle('active');
