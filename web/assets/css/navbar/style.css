@@ -1,0 +1,598 @@
+* {    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.1s;
+    border: px solid;
+}
+body {
+    background-color: ;
+}
+/*---- (SETTING) -----*/
+/*- color -*/
+:root {
+    /*--- color/bar ---*/
+    --nav-bar-bg-color: rgb(47, 46, 53);
+    --nav-bar-main-color:;
+    --nav-bar-text-color: #fff;
+
+    --nav-bar-logo-color:rgb(77, 124, 255);
+
+    --nav-bar-link-text-color: #fff;
+    --nav-bar-link-text-bg-hover: rgb(58, 125, 226);
+
+    --nav-bar-icon-text-color: #fff;
+    --nav-bar-icon-bg-color:;
+
+    /*--- color / scroll ---*/
+    --nav-scrl-indikator-bg-color: gray;
+    --nav-scrl-indikator-main-color: rgb(86, 139, 255);
+
+
+    /*--- color / menu --*/
+    --nav-menu-background-color: rgb(52, 52, 56);
+    --nav-menu-main-color: rgb(62, 137, 228);
+
+    --nav-menu-cont-account-background-color: ;
+    --nav-menu-cont-account-main-color:;
+    --nav-menu-cont-account-text-color:;
+
+    --nav-menu-cont-link-background-color:;
+    --nav-menu-cont-link-main-color: rgb(75, 125, 200);
+    --nav-menu-cont-link-text-color: rgb(167, 167, 167);
+
+
+}
+
+/*---- END (SETTING) -----*/
+/*----= (NAV) =----*/
+.nav {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--nav-bar-bg-color);
+
+}
+/*----= NAV / (BAR) =----*/
+.bar {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding-left:15px;
+    width: 100%;
+    height: 90px;
+    background-color: var(--nav-bar-bg-color);
+}
+
+/*---= BAR / (LEFT) =---*/
+.nav .bar .left {
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+/*---= BAR / LEFT / (TM MENU) =---*/
+.nav .bar .left .btn-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+
+    height: 60px ;
+    width: 60px;
+    overflow: hidden;
+}
+.nav .bar .left .btn-menu .line-1,
+.nav .bar .left .btn-menu .line-2,
+.nav .bar .left .btn-menu .line-3{
+ height: 3px;
+ width: 30px;
+ background-color: var(--nav-bar-text-color);
+}
+/*--- CLIKED TOMBOL MENU -----*/
+.clicked {
+  position: relative;
+}
+.nav .bar .left .clicked .line-1{
+    position: absolute;
+    transform: rotate(55deg);
+}
+.nav .bar .left .clicked .line-2 {
+    position: absolute;
+    transform: rotate(-55deg);
+}
+.nav .bar .left .clicked .line-3{
+    display: none;
+}
+/*---- [END] LEFT/ (TM MENU) */
+/*--- NAV/LEFT / (LOGO) ---*/
+.nav .bar .left span{
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--nav-bar-logo-color);
+}
+/*---  [END] NAV/LEFT / (LOGO) ----*/
+ /*--- [END] NAVBAR/ (LEFT) ---*/
+
+/*---= NAVBVAR / (LINK) =----*/
+.nav .bar .link {
+
+    align-self: center;
+    display: flex;
+    gap: 20px;
+}
+/*---- LINK / a ----*/
+.nav .bar .link a {
+
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 20px;
+
+    padding: 10px;
+    color: var(--nav-bar-link-text-color);
+    border: px solid  ;
+    border-radius: 20px;
+}
+.nav .bar .link a:hover {
+    background-color: var(--nav-bar-link-text-bg-hover);
+
+}
+/*---= [END] NABRAR / (LINK) =--*/
+/*---= NAVBAR / (ICON) =---*/
+.nav .bar .icon{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 17%;
+    color: var(--nav-bar-icon-text-color);
+    border: px solid;
+}
+/*---= ICON / SEARCH ---*/
+.nav .bar .icon .icon-search {
+    transform: rotate(0deg);
+    border-radius: 20px;
+    
+}
+.nav .bar .icon .icon-search:hover {
+    background-color: rgb(45, 99, 206);
+}
+.nav .bar .icon .icon-search div {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+
+    border-radius: 20px;
+}
+.nav .bar .icon .icon-search div  object {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.nav .bar .icon .icon-search.active{
+    transform: rotate(90deg);
+    color: rgb(64, 128, 255);
+    background-color: rgb(69, 69, 75);
+
+}
+.nav .bar .icon .icon-search.active div {
+    border: 1px solid;
+}
+/*----= [END] NAVBAR / (ICON) =----*/
+/*----= [END] NAV/ (BAR) =----*/
+/*---= SCROLL-INDIKATOR ----*/
+.scroll-indikator {
+    position: fixed;
+    z-index: 1;
+    top: 90px;
+
+    height: 5px;
+    width: 100%;
+    border: px solid;
+    background-color: var(--nav-scrl-indikator-bg-color);
+}
+.scroll-indikator .indikator {
+
+    top: 0;
+    left: 0;
+
+    width: 30%;
+    height: 100%;
+    background-color: var(--nav-scrl-indikator-main-color);
+}
+
+.nav .menu.active {
+    left: 0;
+}
+.nav .menu {
+    position: fixed;
+    z-index: 10 ;
+    top: 90px;
+    left: -400px;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 190vh;
+    width: 220px;
+    background-color: var(--nav-menu-background-color);
+    transition: 0.2s linear;
+    border-top: 5px solid rgb(71, 79, 94);
+}
+
+
+.nav .menu .title {
+    position: relative;
+    display: flex;
+
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    color: rgb(77, 76, 76);
+    
+
+    padding: 5px 17px;
+    border-bottom: 1px solid;
+
+}
+
+.nav .menu .cont-account {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 50% 50%;
+
+    width: 100%;
+    height: 85px;
+    border: px solid;
+    background-color: var(--nav-menu-cont-account-background-color);
+}
+
+.nav .menu .cont-account .box-img {
+    grid-column: 1/2;
+    grid-row: 1/3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  background-color: rgb(87, 87, 90);
+}
+
+
+.nav .menu .cont-account .box-username {
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+    background-color: rgb(68, 68, 68);
+}
+
+.nav .menu .cont-account .box-username span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 40%;
+    height: 100%;
+
+    border-bottom: 2px solid rgb(101, 163, 255);
+}
+.nav .menu .cont-account .box-username span {
+    position: relative;
+    font-family: sans-serif;
+    color: white;
+}
+
+
+.nav .menu .cont-account .box-role {
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+    background-color: rgb(77, 77, 77);
+}
+.nav .menu .cont-account .box-role span {
+    font-family: monospace;
+    font-size: 14px;
+    color: rgb(161, 161, 161);
+}
+
+
+.nav .menu .cont-link {
+    cursor: pointer;
+
+
+    height: 60vh;
+    max-height: 100%;
+    width: 100%;
+
+    overflow-y: auto;
+}
+.nav .menu .cont-link::-webkit-scrollbar{
+    width: 5px;
+    height: auto;
+    background-color: rgb(53, 53, 53);
+}
+.nav .menu .cont-link::-webkit-scrollbar-thumb {
+    background-color: rgb(104, 104, 104);
+ 
+    border-radius: 20px;
+}
+.nav .menu .cont-link::-webkit-scrollbar-thumb:hover {
+    background-color: var(--nav-menu-main-color);
+}
+.nav .menu .cont-link .box-link{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 45px;
+    margin-top: 2px;
+}
+
+.nav .menu .cont-link .box-link .text {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+
+    transition: 0.3s
+}
+.nav .menu .cont-link .box-link .text:hover{
+    background-color: gray;
+}
+.nav .menu .cont-link .active{
+    background-color: var(--nav-menu-cont-link-main-color);
+    color: white;
+}
+
+.nav .menu .cont-link .box-link svg{
+    width: 16px;
+    height: 16px;
+    fill: white;
+    color: white;
+}
+.nav .menu .cont-link .box-link .arrow {
+    position: absolute;
+    right: 10px;
+}
+
+.nav .menu .cont-link .box-link .arrow.rotate {
+    transform: rotate(90deg);
+}
+.nav .menu .cont-link .box-link .drop-down {
+    display: none ;
+    background-color: rgb(44, 44, 44);
+    border-left: 2px solid var(--nav-menu-cont-link-main-color);
+}
+.nav .menu .cont-link .box-link .drop-down.active {
+    display: block;
+}
+
+.nav .menu .cont-link .box-link .drop-down .text {
+    font-size: 12px;
+    padding: 0 20px;
+    color: gray;
+}
+
+.nav .menu .cont-link .box-link .drop-down .text:hover {
+    background-color: rgb(94, 94, 94);
+}
+
+
+.nav .container-search {
+    position: fixed;
+    top: 90px;
+    left: 0;
+
+    display: none;
+
+    flex-direction: column;
+
+    width: 100%;
+    height: 90vh;
+    background-color: rgb(61, 61, 63);
+}
+.nav .container-search.open {
+    display: flex;
+
+}
+
+.nav .container-search .box-search::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../image/navbar/background.jpg');
+}
+.nav .container-search .box-search {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 32%;
+    width: 100%;
+}
+
+
+.nav .container-search .box-search .input::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    height:100%;
+    width: 100%;
+    padding: 3px;
+
+    background-color: rgb(56, 117, 247);
+    border-radius: 20px;
+}
+.nav .container-search .box-search .input{
+    position: relative;
+    height: 48px;
+    width: 40%;
+
+    display: flex;
+
+
+    padding: 3px;
+    background-color: rgb(202, 202, 202);
+    border-radius: 20px;
+}
+.nav .container-search .box-search .input input {
+    flex: 1;
+
+    font-family: sans-serif;
+    font-size: 19px;
+
+    padding: 5px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+.nav .container-search .box-search .input input::placeholder {
+    color: rgb(117, 117, 117);
+    font-family: monospace;
+    font-size: 17px;
+}
+.nav .container-search .box-search .input .icon {
+   position: absolute;
+   top: 2px;
+   right: 2px;
+
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+
+    width: 40px;
+    height: 44px;
+    margin: 0;
+    background-color: rgb(69, 118, 255);
+    border-radius: 20px;
+}
+
+.nav .container-search .box-search:hover .output{
+    display: flex;
+}
+.nav .container-search .box-search .output {
+    position: relative;
+    translate: 0 65%;
+
+    display: none;
+    flex-direction: column;
+    position: absolute;
+  
+    gap: 5px;
+    width: 40%;
+    height: 190px;
+    background-color: gray;
+
+    overflow: auto;
+}
+.nav .container-search .box-search .output-item {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 50px;
+    background-color: rgb(123, 123, 123);
+}
+.nav .container-search .box-search .output-item:hover {
+    background-color: rgb(96, 96, 96);
+}
+.nav .container-search .box-search .output-item a {
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 15px;
+
+
+    flex: 1;
+    padding: 20px;
+    color: white;
+}
+.nav .container-search .box-search .output-item span {
+    position: absolute;
+    right: 5px;
+
+    font-family: sans-serif;
+    font-size: 12px;
+    color: rgb(175, 175, 175);
+
+}
+
+.nav .container-search .wrap-box {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid;
+
+    overflow-x: auto;
+}
+
+.nav .container-search .wrap-box .box {
+    padding: 5px;
+    height: 250px;
+    min-width: 150px;
+    width: 200px;
+    background-color: #484848;
+    border: px solid;
+}
+.nav .container-search .wrap-box .box .title {
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgb(129, 129, 129);
+
+}
+
+
+.nav .container-search .wrap-box .box .text li {
+    list-style-position: inside;
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 4px;
+    color: #696969;
+} 
