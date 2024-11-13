@@ -706,7 +706,7 @@ body {
 
     .nav .bar .box-menu::before {
      top: -35px;
-     left: -90px;
+     left: -30px;
    }
     .nav .bar .box-menu {
         width:80px;
