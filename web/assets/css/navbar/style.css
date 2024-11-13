@@ -704,9 +704,13 @@ body {
         z-index: 9;
     }
 
+    .nav .bar .box-menu::before {
+     top: -30px
+left: -20px;
+   }
     .nav .bar .box-menu {
         width:80px;
-        padding:20px;
+        padding:30px;
     }
     
     .nav .bar .logo {
@@ -763,6 +767,7 @@ body {
 
     .nav .menu .cont-link .box-link .text{
         height: 80px;
+        padding: 30px;
     }
     .nav .menu .cont-link .box-link .text svg {
         width: 20px;
