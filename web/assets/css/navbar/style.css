@@ -331,80 +331,38 @@ body {
     color: rgb(77, 76, 76);
     
 
-    padding: 5px 17px;
+    padding: 10px 17px;
     border-bottom: 1px solid;
 
 }
-/*-----= MENU / Box_Account =------*/
-.nav .menu .box-account {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 50% 50%;
+/*-----= MENU / ADMIN - PAGES  =------*/
+.nav .menu .admin-pages {
+    display: flex;
+    flex-direction: column;
 
     width: 100%;
-    height: 85px;
-    border: px solid;
-    background-color: var(--nav-menu-cont-account-background-color);
+    height: 160px;
+    max-height: 120px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-.nav .menu .box-account .box-img {
-    grid-column: 1/2;
-    grid-row: 1/3;
-
+.nav .menu .admin-pages .box-link {
+    
+}
+.nav .menu .admin-pages .box-link .text {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 20px;
 
-  background-color: rgb(87, 87, 90);
-}
-
-
-.nav .menu .box-account .box-username {
-    grid-column: 2/3;
-    grid-row: 1/2;
-
-    display: flex;
-    align-items: center;
-
-    padding: 0 20px;
-    background-color: rgb(68, 68, 68);
-}
-
-.nav .menu .box-account .box-username span::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 40%;
-    height: 100%;
-
-    border-bottom: 2px solid rgb(101, 163, 255);
-}
-.nav .menu .box-account .box-username span {
-    position: relative;
-    font-family: sans-serif;
-    color: white;
-}
-
-
-.nav .menu .box-account .box-role {
-    display: flex;
-    align-items: center;
-
-    grid-column: 2/3;
-    grid-row: 2/3;
-
-
-    padding: 0 20px;
-    background-color: rgb(77, 77, 77);
-}
-.nav .menu .box-account .box-role span {
     font-family: monospace;
-    font-size: 14px;
-    color: rgb(161, 161, 161);
+    color: rgb(217, 217, 217);
+
+    padding: 10px;
+    height: 40px;
+    border: px solid;
 }
-/*------= [END] MENU / Cont_Account =------*/
+/*------= [END] MENU / ADMIN - PAGES =------*/
 /*------= MENU / Cont_Link = ------*/
 .nav .menu .cont-link {
     cursor: pointer;
@@ -413,6 +371,7 @@ body {
     height: 60vh;
     max-height: 100%;
     width: 100%;
+    background-color: rgba(41, 41, 44, 0.463);
 
     -webkit-tap-highlight-color: transparent;
     overflow-y: auto;
@@ -420,12 +379,15 @@ body {
 .nav .menu .cont-link::-webkit-scrollbar{
     width: 5px;
     height: auto;
-    background-color: rgb(53, 53, 53);
+    background-color: rgb(44, 44, 52);
 }
 .nav .menu .cont-link::-webkit-scrollbar-thumb {
-    background-color: rgb(104, 104, 104);
+    background-color: rgb(57, 96, 205);
  
+    outline: 0;
+    border: 0;
     border-radius: 20px;
+    box-shadow: none;
 }
   
 
@@ -435,6 +397,8 @@ body {
     flex-direction: column;
     min-height: 45px;
     margin-top: 2px;
+
+    border-bottom: 2px solid rgba(85, 85, 85, 0.609);
 }
 
 
