@@ -705,8 +705,8 @@ body {
     }
 
     .nav .bar .box-menu::before {
-     top: -30px;
-     left: -30px;
+     top: -35px;
+     left: -90px;
    }
     .nav .bar .box-menu {
         width:80px;
