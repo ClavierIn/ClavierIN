@@ -43,7 +43,9 @@ body {
 
 
 }
-
+.nav div {
+    -webkit-tap-highlight-color: transparent;
+}
 /*--- ANIMATION --*/
 @keyframes FadeIn {
     from {
@@ -57,6 +59,7 @@ body {
 }
 
 /*---- END (SETTING) -----*/
+
 /*----= (NAV) =----*/
 .nav {
     z-index: 100;
@@ -64,8 +67,6 @@ body {
     top: 0;
     left: 0;
     background-color: var(--nav-bar-bg-color);
-
-
 }
 /*----= NAV / (BAR) =----*/
 .bar {
@@ -84,27 +85,7 @@ body {
    
 }
 
-@keyframes barAnimation {
-    from {
-        opacity: 0.1;
-        transform: translateY(-15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-/*---= BAR / (LEFT) =---
-.nav .bar .left {
-    cursor:pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10%;
-    padding: 2px;
-}
-    */
-/*---= BAR / LEFT / (TM MENU) =---*/
+/*---= BAR / (TM MENU) =---*/
 .nav .bar .box-menu::before {
     content: "";
     position: absolute;
@@ -142,7 +123,6 @@ body {
 .nav .bar .box-menu:hover::before{
     opacity: 1;
 }
-
 .nav .bar .box-menu .line-1,
 .nav .bar .box-menu .line-2,
 .nav .bar .box-menu .line-3{
@@ -171,8 +151,8 @@ body {
 .nav .bar .clicked .line-2{
     opacity: 0;
 }
-/*---- [END] LEFT/ (TM MENU) */
-/*--- NAV/LEFT / (LOGO) ---*/
+/*-----= [END] NAV/ BAR / (TM MENU) =-----*/
+/*-----= NAV/LEFT / (LOGO) =-----*/
 @keyframes logo {
     0%,100%{
         background-position: left 0 bottom 0px;
@@ -190,11 +170,13 @@ body {
 
 .nav .bar .logo {
     align-self: center;
+
     margin-left: 15px;
 }
 
 .nav .bar .logo span{
     position: relative;
+
     font-family: monospace;
     font-weight: 600;
     font-size: 30px;
@@ -213,23 +195,21 @@ body {
 }
 
 
-/*---  [END] NAV/LEFT / (LOGO) ----*/
- /*--- [END] NAVBAR/ (LEFT) ---*/
+/*-----= [END] NAV/LEFT / (LOGO) ----*/
+/*-----= [END] NAVBAR/ (LEFT) ---*/
 
-/*---= NAVBVAR / (LINK) =----*/
-.nav .bar .link {
-  
-
+/*-----= NAVBVAR / (LINK) =----*/
+.nav .bar .link { 
     justify-self: ;
+
     display: flex;
     align-items: center;
     justify-content: center;
     flex: 1;
     gap: 20px;
 }
-/*---- LINK / a ----*/
+/*-----= LINK / a =-----*/
 .nav .bar .link a {
-
     text-decoration: none;
     font-family: monospace;
     font-size: 20px;
@@ -243,8 +223,8 @@ body {
     background-color: var(--nav-bar-link-text-bg-hover);
 
 }
-/*---= [END] NABRAR / (LINK) =--*/
-/*---= NAVBAR / (ICON) =---*/
+/*-----= [END] NABRAR / (LINK) =-----*/
+/*-----= NAVBAR / (ICON) =-----*/
 .nav .bar .icon{
     align-self: flex-end;
     cursor: pointer;
@@ -257,7 +237,7 @@ body {
     color: var(--nav-bar-icon-text-color);
     border: px solid;
 }
-/*---= ICON / SEARCH ---*/
+/*-----= ICON / ICON_SEARCH =-----*/
 .nav .bar .icon .icon-search {
     transform: rotate(0deg);
     border-radius: 20px;
@@ -266,6 +246,7 @@ body {
 .nav .bar .icon .icon-search:hover {
     background-color: rgb(45, 99, 206);
 }
+
 .nav .bar .icon .icon-search div {
     position: relative;
     width: 40px;
@@ -286,12 +267,15 @@ body {
     background-color: rgb(69, 69, 75);
 
 }
+/*-----= Active ICON_SEARCH ------*/
 .nav .bar .icon .icon-search.active div {
     border: 1px solid;
 }
-/*----= [END] NAVBAR / (ICON) =----*/
-/*----= [END] NAV/ (BAR) =----*/
-/*---= SCROLL-INDIKATOR ----*/
+/*-----= [END] NAVBAR / (ICON) =----*/
+
+/*-----= [END] NAV/ (BAR) =----*/
+
+/*-----= NAV / SCROLL-INDIKATOR =----*/
 .scroll-indikator {
     position: fixed;
     z-index: 1;
@@ -301,7 +285,7 @@ body {
     width: 100%;
     border: px solid;
     background-color: var(--nav-scrl-indikator-bg-color);
-    animation: barAnimation 0.3s ease-in-out ;
+    animation: FadeIn 0.3s ease-in-out ;
 }
 .scroll-indikator .indikator {
 
@@ -312,10 +296,10 @@ body {
     height: 100%;
     background-color: var(--nav-scrl-indikator-main-color);
 }
+/*-----= [END] NAV / SCROLL_INDIKATOR ------*/
 
-.nav .menu.active {
-    left: 0;
-}
+/*-----= NAV / MENU =-----------*/
+
 .nav .menu {
     position: fixed;
     z-index: 10;
@@ -331,8 +315,12 @@ body {
     transition: 0.2s linear;
     border-top: 5px solid var(--nav-scrl-indikator-main-color);
 }
+/*-----= ACTIVE MENU -----*/
+.nav .menu.active {
+    left: 0;
+}
 
-
+/*-----= menu / Title ------*/
 .nav .menu .title {
     position: relative;
     display: flex;
@@ -347,8 +335,8 @@ body {
     border-bottom: 1px solid;
 
 }
-
-.nav .menu .cont-account {
+/*-----= MENU / Box_Account =------*/
+.nav .menu .box-account {
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: 50% 50%;
@@ -359,7 +347,7 @@ body {
     background-color: var(--nav-menu-cont-account-background-color);
 }
 
-.nav .menu .cont-account .box-img {
+.nav .menu .box-account .box-img {
     grid-column: 1/2;
     grid-row: 1/3;
 
@@ -371,7 +359,7 @@ body {
 }
 
 
-.nav .menu .cont-account .box-username {
+.nav .menu .box-account .box-username {
     grid-column: 2/3;
     grid-row: 1/2;
 
@@ -382,7 +370,7 @@ body {
     background-color: rgb(68, 68, 68);
 }
 
-.nav .menu .cont-account .box-username span::before {
+.nav .menu .box-account .box-username span::before {
     content: "";
     position: absolute;
     top: 0;
@@ -393,30 +381,31 @@ body {
 
     border-bottom: 2px solid rgb(101, 163, 255);
 }
-.nav .menu .cont-account .box-username span {
+.nav .menu .box-account .box-username span {
     position: relative;
     font-family: sans-serif;
     color: white;
 }
 
 
-.nav .menu .cont-account .box-role {
+.nav .menu .box-account .box-role {
+    display: flex;
+    align-items: center;
+
     grid-column: 2/3;
     grid-row: 2/3;
 
-    display: flex;
-    align-items: center;
 
     padding: 0 20px;
     background-color: rgb(77, 77, 77);
 }
-.nav .menu .cont-account .box-role span {
+.nav .menu .box-account .box-role span {
     font-family: monospace;
     font-size: 14px;
     color: rgb(161, 161, 161);
 }
-
-
+/*------= [END] MENU / Cont_Account =------*/
+/*------= MENU / Cont_Link = ------*/
 .nav .menu .cont-link {
     cursor: pointer;
 
@@ -425,6 +414,7 @@ body {
     max-height: 100%;
     width: 100%;
 
+    -webkit-tap-highlight-color: transparent;
     overflow-y: auto;
 }
 .nav .menu .cont-link::-webkit-scrollbar{
@@ -437,9 +427,8 @@ body {
  
     border-radius: 20px;
 }
-.nav .menu .cont-link::-webkit-scrollbar-thumb:hover {
-    background-color: var(--nav-menu-main-color);
-}
+  
+
 .nav .menu .cont-link .box-link{
     position: relative;
     display: flex;
@@ -447,6 +436,8 @@ body {
     min-height: 45px;
     margin-top: 2px;
 }
+
+
 
 .nav .menu .cont-link .box-link .text {
     display: flex;
@@ -464,7 +455,7 @@ body {
     transition: 0.3s
 }
 .nav .menu .cont-link .box-link .text:hover{
-    background-color: gray;
+    background-color: rgb(62, 63, 68);
 }
 .nav .menu .cont-link .active{
     background-color: var(--nav-menu-cont-link-main-color);
@@ -485,9 +476,11 @@ body {
 .nav .menu .cont-link .box-link .arrow.rotate {
     transform: rotate(90deg);
 }
+
+
 .nav .menu .cont-link .box-link .drop-down {
     display: none ;
-    background-color: rgb(44, 44, 44);
+    background-color: rgb(48, 48, 52);
     border-left: 2px solid var(--nav-menu-cont-link-main-color);
 }
 .nav .menu .cont-link .box-link .drop-down.active {
@@ -500,15 +493,18 @@ body {
     color: gray;
 }
 
-.nav .menu .cont-link .box-link .drop-down .text:hover {
+
+.nav .menu .cont-link .box-link .drop-down .text:hover{
     background-color: rgb(94, 94, 94);
 }
+/*-----= [END] MENU / Cont_Link =-----*/
+/*-----= [END] NAV / MENU =-----*/
 
-
+/*-----= NAV / Container_Search =-----*/
 .nav .container-search {
     z-index: 10;
     position: fixed;
-    top: 90px;
+    top: 94px;
     left: 0;
 
     display: none;
@@ -666,7 +662,7 @@ body {
     height: 100%;
     gap: 20px;
     padding: 20px;
-    border: 1px solid;
+
 
     overflow-x: auto;
 }
@@ -696,7 +692,7 @@ body {
     padding: 4px;
     color: #696969;
 } 
-
+/*-----= [END] NAV / Container_Search =-----*/
 
 @media (max-width: 900px){
     .nav .bar {
@@ -704,15 +700,6 @@ body {
         z-index: 9;
     }
 
-    .nav .bar .box-menu::before {
-     top: -20px;
-     left: 10px;
-   }
-    .nav .bar .box-menu {
-        width:80px;
-        padding:30px;
-    }
-    
     .nav .bar .logo {
         flex: 1;
         display: flex;
@@ -751,26 +738,60 @@ body {
         border-radius: 0;
         border-right: 2px solid #444444;
     }
+
+
+    .nav .container-search .box-search .input{
+        width:50%;
+    }
+    .nav .container-search .wrap-box .box {
+        min-width: 400px;
+        min-height: 80%;
+    }
     
 }
 
 @media (max-width: 500px){
+    .nav .bar .box-menu::before {
+        left: -40px;
+    }
+    .nav .bar .box-menu {
+        width: 80px;
+        padding: 10px ;
+    }
+
+
     .nav .menu {
-        left: -800px;
         width: 100%;
-        
+        left: -600px;
     }
 
     .nav .menu .cont-account {
-        grid-template-columns: 30% 40%;
+        grid-template-columns: 20% 30%;
     }
 
     .nav .menu .cont-link .box-link .text{
-        height: 80px;
+        height: 70px;
         padding: 30px;
+
+        font-size: 19px;
     }
     .nav .menu .cont-link .box-link .text svg {
         width: 20px;
         height: 20px;
+    }
+
+    
+    .nav .container-search .box-search .input {
+        width: 70%;
+    }
+    .nav .container-search .box-search .output {
+        margin-top: 2px;
+        width: 70%;
+    }
+
+    
+    .nav .container-search .wrap-box .box {
+        min-width: 200px;
+        min-height: 80%;
     }
 }
