@@ -704,6 +704,10 @@ body {
         z-index: 9;
     }
 
+    .nav .bar .box-menu {
+        width:60px;
+    }
+    
     .nav .bar .logo {
         flex: 1;
         display: flex;
@@ -745,7 +749,7 @@ body {
     
 }
 
-@media (max-width: 400px){
+@media (max-width: 500px){
     .nav .menu {
         width: 100%;
     }
