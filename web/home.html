@@ -16,7 +16,7 @@
 </head>
 <body>
 
-     <div class="nav">
+   <div class="nav">
         <div class="bar">
        
             <div class="box-menu" id="tm-menu">
@@ -33,6 +33,7 @@
             <a href="#">Project</a>
             <a href="#">Learn</a>
             <a href="#">Tools</a>
+            <a href="#">Labs</a>
         </div>
             <div class="icon">
                 <div class="icon-search" id="search-button" onclick="openSearch(this)">
@@ -43,7 +44,7 @@
 
 
         <div class="scroll-indikator">   
-            <div class="indikator"></div>
+            <div class="indikator" id="scIndikator"></div>
         </div>
 
             <div class="menu" id="menu">
@@ -95,8 +96,8 @@
                     </div>
                 </div>
              
-                <div class="box-link" onclick="dropDown(this)">
-                    <div class="text">
+                <div class="box-link" onclick="dropDown(this)" >
+                    <div class="text" id="closeDrop">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M96 0C43 0 0 43 0 96L0 416c0 53 43 96 96 96l288 0 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64c17.7 0 32-14.3 32-32l0-320c0-17.7-14.3-32-32-32L384 0 96 0zm0 384l256 0 0 64L96 448c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16zm16 48l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
                         <span>Learn</span>
                         <object class="arrow" type="image/svg+xml" data="assets/icon/chevron_right.svg" width="20" height="20"></object>
@@ -208,9 +209,10 @@
                                 </div>
                             </ul>
                             <ul class="box">
-                                <span class="title">Web AI</span>
+                                <span class="title">Tools Web</span>
                                 <div class="text">
-                                    <span></span>
+                                   <li>REMIX icon</li>
+                                   <li>Goole Font</li>
                                 </div>
                             </ul>
                         </div>
@@ -219,10 +221,25 @@
             </div>
 
     <script src="assets/js/navbar/script.js"></script>
- 
+
+    
     <div class="content">
-    <div class="sliderShow-container">
-        <div class="home container-item">
+    <div class="sliderShow-container" id="scroll-container">
+    <div class=" container-item home">
+            <div class="box-item">
+                
+                <span>Mau punya Website Keren?</span>
+                <p>
+                    kita bantu bikin Web yang gak cuman keren, tapi juga gampang di pakai buat kamu,
+                    kami siap wujudkan desain impian mu dengan performa maksimal.
+                </p>
+                <div class="box-button">
+                <a href="#"><button type="button">Bangun Web mu sekarang</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-item home-2 ">
             <div class="box-item">
                 
                 <span>Digital Service</span>
@@ -239,7 +256,7 @@
             </div>
         </div>
 
-        <div class="learn container-item">
+        <div class="container-item learn">
             <div class="box-item">
                 
                 <span>Learn <i class="fas fa-closed-captioning    "></i></span>
@@ -256,8 +273,10 @@
             </div>
            
         </div>
+        <div class="dot-container" id="dots-container"></div>
         </div>
     </div>
-    <script src="assets/js/navbar/script.js"></script>
+
+    <script src="assets/js/home/script.js"></script>
 </body>
 </html>
