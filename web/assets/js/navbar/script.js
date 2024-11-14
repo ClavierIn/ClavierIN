@@ -1,23 +1,64 @@
+var nav = document.querySelector(".nav")
+var bar = nav.querySelector(".bar")
 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 130 || document.documentElement.scrollTop > 130) {
+        nav.classList.add("active")
+  } else {
+        nav.classList.remove("active")
+  }
+
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("scIndikator").style.width = scrolled + "%";
+}
 //menu
-let menu = document.getElementById('menu')
+
+
+var menu = nav.querySelector('#menu');
 document.getElementById('tm-menu').onclick = function() {
     this.classList.toggle('clicked'); // Toggle the 'clicked' class
 
     menu.classList.toggle('active');
 };
 
+// menu / cont link
+var contLink = menu.querySelector(".cont-link");
+var boxLink = contLink.querySelector(".box-link");
+
+
 
 function dropDown(element) {
+   
+    var arrow = element.querySelector(".arrow");
+    var drop = element.querySelector(".drop-down");
 
-    let arrow = element.querySelector(".arrow");
-    let drop = element.querySelector(".drop-down");
-    element.classList.toggle('active')
-    drop.classList.toggle('active')
-    arrow.classList.toggle('rotate')
-}
+    arrow.classList.add('rotate')
+
+    if (drop){
+        if (getComputedStyle(drop).display === 'none')
+        {
+                drop.classList.add('active');
+        }
+        else {
+            drop.classList.remove('active')
+                };
+                
+           
+        }
+    };
+
+
 
 //end menu
+
+
+function scrollIn() {
+ 
+}
 
 //search
 
@@ -27,6 +68,12 @@ function openSearch(element){
     element.classList.toggle("active")
     menu.classList.style = "color:#f4fe"
     search.classList.toggle("open")
+
+    //tutup menu
+    let tmMenu = document.getElementById("tm-menu")
+
+    tmMenu.classList.remove('clicked')
+    menu .classList.remove('active')
 }
 
 
