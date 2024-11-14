@@ -7,6 +7,7 @@
 }
 body {
     background-color: ;
+    height: 20;
 }
 /*---- (SETTING) -----*/
 /*- color -*/
@@ -25,7 +26,7 @@ body {
     --nav-bar-icon-bg-color:;
 
     /*--- color / scroll ---*/
-    --nav-scrl-indikator-bg-color: gray;
+    --nav-scrl-indikator-bg-color: rgb(96, 96, 96);
     --nav-scrl-indikator-main-color: rgb(66, 103, 227);
 
 
@@ -50,7 +51,7 @@ body {
 @keyframes FadeIn {
     from {
         opacity: 0.1;
-        transform: translateY(-15px);
+        transform: translateY(-20px);
     }
     to {
         opacity: 1;
@@ -68,8 +69,9 @@ body {
     left: 0;
     background-color: var(--nav-bar-bg-color);
 }
+
 /*----= NAV / (BAR) =----*/
-.bar {
+.nav .bar {
     position: fixed;
     z-index: 100;
     left: 0;
@@ -80,9 +82,14 @@ body {
 
     width: 100%;
     height: 90px;
-    background-color: var(--nav-bar-bg-color);
+    background: transparent;
     animation: FadeIn 0.3s ease-in-out ;
    
+}
+.nav.active .bar {
+    background-color:  var(--nav-bar-bg-color);
+    transition-delay: 0.2s;
+    transition: 0s;
 }
 
 /*---= BAR / (TM MENU) =---*/
@@ -221,7 +228,6 @@ body {
 }
 .nav .bar .link a:hover {
     background-color: var(--nav-bar-link-text-bg-hover);
-
 }
 /*-----= [END] NABRAR / (LINK) =-----*/
 /*-----= NAVBAR / (ICON) =-----*/
@@ -276,16 +282,21 @@ body {
 /*-----= [END] NAV/ (BAR) =----*/
 
 /*-----= NAV / SCROLL-INDIKATOR =----*/
+.nav.active .scroll-indikator {
+    display: flex;
+}
 .scroll-indikator {
     position: fixed;
     z-index: 1;
     top: 90px;
 
+    display: none;
+
     height: 5px;
     width: 100%;
     border: px solid;
     background-color: var(--nav-scrl-indikator-bg-color);
-    animation: FadeIn 0.3s ease-in-out ;
+    animation: FadeIn 0s ease-in-out ;
 }
 .scroll-indikator .indikator {
 
@@ -478,6 +489,7 @@ body {
     width: 100%;
     height: 90vh;
     background-color: rgb(61, 61, 63);
+    border-top: 4px solid rgb(70, 129, 255);
 }
 .nav .container-search.open {
     display: flex;
@@ -676,13 +688,16 @@ body {
         letter-spacing: 1;
     }
 
+    .nav.active .bar .link {
+        display: flex;
+    }
     .nav .bar .link {
 
         position: fixed;
         top: 94px;
         left: 0;
 
-        display: flex;
+        display: none;
         align-items: normal;
         justify-content: normal;
         gap: 5px;
@@ -690,9 +705,9 @@ body {
 
         width: 100%;
         height: 45px;
-        background-color: #484848;
+        background-color: #303338;
 
-        overflow: scroll;
+        overflow: auto;
     }
     .nav .bar .link a{
         flex: 1;
