@@ -1,54 +1,102 @@
-const scrollContainer = document.getElementById('scroll-container');
-const dotsContainer = document.getElementById('dots-container');
-const slides = document.querySelectorAll('.container-box');
-let dots = [];
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollableContainer = document.getElementById('scroll-container');
+  const leftArrow = document.getElementById('left-arrow');
+  const rightArrow = document.getElementById('right-arrow');
+  const dotsContainer = document.getElementById('dots');
+  const items = document.querySelectorAll('.container .box');
+  const totalItems = items.length;
 
-// Membuat dots untuk setiap slide
-slides.forEach((slide, index) => {
-  const dot = document.createElement('span');
-  dot.classList.add('dot');
-  
-  // Event listener untuk scroll ke slide tertentu saat dot diklik
-  dot.addEventListener('click', () => scrollToSlide(index));
-  
-  dotsContainer.appendChild(dot);
-  dots.push(dot);
-});
+  // Dynamically generate dots based on the number of items
+  for (let i = 0; i < totalItems; i++) {
+      const dot = document.createElement('span');
+      dot.classList.add('dot');
+      dot.setAttribute('data-index', i); // Store the index for later reference
+      dotsContainer.appendChild(dot);
+  }
 
-// Fungsi untuk scroll ke slide berdasarkan index
-function scrollToSlide(index){
-  const slideWidth = slides[0].clientWidth; // Mendapatkan lebar setiap slide
-  scrollContainer.scrollToSlide({
-    left: slideWidth * index, // Menggeser ke slide sesuai index
-    behavior: 'smooth' // Scroll halus
-  });
-  updateDots(index); // Update dots saat slider bergeser
-}
+  const dots = document.querySelectorAll('.dot');
 
-// Update dots untuk menandai slide aktif
-function updateDots(activeIndex) {
-  dots.forEach((dot, index) => {
-    if (index === activeIndex) {
-      dot.classList.add('active'); // Tambahkan kelas "active" pada dot aktif
+  // Function to update the active dot based on the scroll position
+  function updateActiveDot() {
+      const scrollPosition = scrollableContainer.scrollLeft;
+      const itemWidth = items[0].offsetWidth;
+      const activeIndex = Math.floor((scrollPosition + itemWidth / 2) / itemWidth);
+
+      // Remove 'active' class from all dots
+      dots.forEach(dot => dot.classList.remove('active'));
+
+      // Add 'active' class to the current dot
+      if (dots[activeIndex]) {
+          dots[activeIndex].classList.add('active');
+      }
+      if (activeIndex === 0) {
+        leftArrow.style.display = 'none'; // Hide left arrow at the first item
     } else {
-      dot.classList.remove('active'); // Hapus kelas "active" dari dot yang lain
+        leftArrow.style.display = 'block'; // Show left arrow if not at the first item
     }
+  }
+
+  // Event listener to update dots on scroll
+  scrollableContainer.addEventListener('scroll', updateActiveDot);
+
+  // Initial call to update dots on page load
+  updateActiveDot();
+
+  // Add click event to each dot to scroll to the corresponding item
+  dots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+          const index = parseInt(e.target.getAttribute('data-index'), 10);
+          const itemWidth = items[0].offsetWidth;
+          const scrollToPosition = index * itemWidth;
+
+          // Smooth scroll to the item
+          scrollableContainer.scrollTo({
+              left: scrollToPosition,
+              behavior: 'smooth' // Smooth scroll animation
+          });
+
+          // Update active dot after scrolling
+          updateActiveDot();
+      });
   });
-}
 
-// Event listener untuk scroll: Update dot aktif saat slider di-scroll manual
-scrollContainer.addEventListener('scroll', () => {
-  const slideWidth = slides[0].clientWidth;
-  const activeIndex = Math.round(scrollContainer.scrollLeft / slideWidth);
-  updateDots(activeIndex);
+  // Add click event for left arrow
+  leftArrow.addEventListener('click', () => {
+      const itemWidth = items[0].offsetWidth;
+      let newScrollPosition = scrollableContainer.scrollLeft - itemWidth;
+
+      // Loop back to the last item if we scroll past the first
+      if (newScrollPosition < 0) {
+          newScrollPosition = (totalItems - 1) * itemWidth;
+      }
+
+      // Smooth scroll to the new position
+      scrollableContainer.scrollTo({
+          left: newScrollPosition,
+          behavior: 'smooth'
+      });
+
+      // Update active dot after scrolling
+      updateActiveDot();
+  });
+
+  // Add click event for right arrow
+  rightArrow.addEventListener('click', () => {
+      const itemWidth = items[0].offsetWidth;
+      let newScrollPosition = scrollableContainer.scrollLeft + itemWidth;
+
+      // Loop back to the first item if we scroll past the last
+      if (newScrollPosition >= totalItems * itemWidth) {
+          newScrollPosition = 0;
+      }
+
+      // Smooth scroll to the new position
+      scrollableContainer.scrollTo({
+          left: newScrollPosition,
+          behavior: 'smooth'
+      });
+
+      // Update active dot after scrolling
+      updateActiveDot();
+  });
 });
-
-// Update ukuran slide saat jendela diubah ukurannya
-window.addEventListener('resize', () => {
-  const slideWidth = slides[0].clientWidth;
-  const activeIndex = Math.round(scrollContainer.scrollLeft / slideWidth);
-  updateDots(activeIndex); // Pastikan dot tetap benar saat ukuran jendela berubah
-});
-
-// Setel dot pertama sebagai aktif saat halaman pertama kali dimuat
-updateDots(0);
