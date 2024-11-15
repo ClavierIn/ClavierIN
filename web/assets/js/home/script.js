@@ -1,5 +1,5 @@
 const scrollContainer = document.getElementById('scroll-container');
-const dotsContainer = document.getElementById('dot-container');
+const dotsContainer = document.getElementById('dots-container');
 const slides = document.querySelectorAll('.container-box');
 let dots = [];
 
