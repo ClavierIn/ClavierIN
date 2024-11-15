@@ -222,60 +222,42 @@
 
     <script src="assets/js/navbar/script.js"></script>
 
-    
     <div class="content">
-    <div class="sliderShow-container" id="scroll-container">
-    <div class="container-item home">
-            <div class="box-item">
-                
-                <span>Mau punya Website Keren?</span>
-                <p>
-                    kita bantu bikin Web yang gak cuman keren, tapi juga gampang di pakai buat kamu,
-                    kami siap wujudkan desain impian mu dengan performa maksimal.
-                </p>
-                <div class="box-button">
-                <a href="#"><button type="button">Bangun Web mu sekarang</button></a>
+    <div class="scroll-show">
+
+    <button class=" fas fa arrow left-arrow" id="left-arrow"><i class="ri-arrow-left-s-fill"></i></button>
+  
+        <!-- Scrollable content container -->
+        <div class="container" id="scroll-container">
+            <div class="box box-1">
+                <div class="item-1">
+                    <div class="title"><span>Mau punya web keren buat usaha kamu?</span></div>
+                    <div class="text">
+                        <p>
+                            Kami bantu bikin web yang gak cuman keren, tapi juga gampang di pake buat kamu. kami siap wujudkan desain impian kamu dengan performa maksimal
+                        </p>
+                    </div>
+                    <div class="button">
+                        <button>PESAN WEB YANG KAMU MAU</button>
+                    </div>
                 </div>
             </div>
+            <div class="box">Item 2</div>
+            <div class="box">Item 3</div>
+            <div class="box">Item 4</div>
+            <div class="box">Item 5</div>
+
+            
         </div>
 
-        <div class="container-item home-2 ">
-            <div class="box-item">
-                
-                <span>Digital Service</span>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                      when an unknown printer took a galley of type and scrambled it to make a type
-                       specimen book
-                </p>
-                <div class="box-button">
-                <a href="#"><button type="button">Contact Me</button></a>
-                <a href="#"><button type="button">My Project</button></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-item learn">
-            <div class="box-item">
-                
-                <span>Learn <i class="fas fa-closed-captioning    "></i></span>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                      when an unknown printer took a galley of type and scrambled it to make a type
-                       specimen book
-                </p>
-                <div class="box-button">
-                <a href="#"><button type="button">Contact Me</button></a>
-                <a href="#"><button type="button">My Project</button></a>
-                </div>
-            </div>
-           
-        </div>
-        <div class="dot-container" id="dots-container"></div>
-        </div>
+              <!-- Dots container, populated by JS -->
+        <div class="dots" id="dots"></div>
+  
+        <button class="arrow right-arrow" id="right-arrow"><i class="ri-arrow-right-s-fill"></i></button>
+      
     </div>
+    </div>
+
 
     <script src="assets/js/home/script.js"></script>
 </body>
