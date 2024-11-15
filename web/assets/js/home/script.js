@@ -18,7 +18,7 @@ slides.forEach((slide, index) => {
 // Fungsi untuk scroll ke slide berdasarkan index
 function scrollToSlide(index){
   const slideWidth = slides[0].clientWidth; // Mendapatkan lebar setiap slide
-  scrollContainer.scrollTo({
+  scrollContainer.scrollToSlide({
     left: slideWidth * index, // Menggeser ke slide sesuai index
     behavior: 'smooth' // Scroll halus
   });
