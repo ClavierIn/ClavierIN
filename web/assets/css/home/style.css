@@ -26,7 +26,7 @@ body {
 }
 .content .scroll-show .container {
     display: grid;
-    grid-template-columns: repeat(8, 100%);
+    grid-template-columns: repeat(3, 100%);
     grid-template-rows: 1/2;
 
     overflow-x: scroll;
@@ -187,8 +187,16 @@ body {
     border-radius:  0 20px 0 20px;
     outline: 0;
 }
-.box .item-1 .button button:nth-child(1):hover {
+.box-1 .item-1 .button button:nth-child(1):hover {
 
     background-color:rgb(49, 138, 255) ;
    
 }
+
+.container-1 {
+    width:100%;
+    height:100vh;
+    
+}
+
+
