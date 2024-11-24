@@ -8,14 +8,40 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: px solid;
 }
 
 body {
     height: 1000vh;
     background-color: rgb(70, 70, 74);
 }
-/*-----= CONTENT =_-------*/
+/*-----=  SETING  =-------*/
+/*--- animation ---*/
+@keyframes animation-blur {
+    from {
+        filter: blur(10px);
+    }
+    to {
+        filter:  blur(0px);
+    }
+}
+@keyframes animation-zoom-out {
+    from { 
+        filter: blur(8px);
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        filter: blur(0px);
+        opacity: 1;
+        scale: 1;
+    }
+}
 
+/*-----= END SETING =------*/
+
+
+/*-----= CONTENT =_-------*/
 /*-----= CONTENT / SCROLL_SHOW =------*/
 /*-----=_-SETING-_=------*/
 .content .scroll-show {
@@ -23,11 +49,13 @@ body {
     display: flex;
     width: 100%;
     height: 100vh;
+
+    animation: animation-blur 0.5s linear;
 }
 .content .scroll-show .container {
     display: grid;
     grid-template-columns: repeat(3, 100%);
-    grid-template-rows: 1/2;
+    grid-template-rows: 1/1;
 
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
@@ -47,6 +75,7 @@ body {
 
 .arrow {
     position: absolute;
+    z-index: 10;
     top: 50%;
 
     transform: translateY(-50%);
@@ -65,6 +94,7 @@ body {
 }
 .arrow i {
     font-size: 30px;
+
 }
 .left-arrow {
     left: 0;
@@ -101,7 +131,11 @@ body {
 }
 
 
-.content .scroll-show .container .box {
+.content .scroll-show .container .box { 
+   animation: animation-blur 0.3slinear;
+    animation-timeline: view();
+
+
     scroll-snap-align: start;
     display:  flex;
     align-items: center;
@@ -111,7 +145,16 @@ body {
 }
 
 /*-----=_- MAIN -_=----*/
+@keyframes decoration-rotate {
+    from {
+        transform: rotate(90deg);
+    }
+    to {
+        transform: rotate(450deg);
+    }
+}
 /*--- BOX_1 ---*/
+
 .content .scroll-show .container .box-1::before {
     content: "";
     z-index: -1;
@@ -139,14 +182,14 @@ body {
     flex-direction: column;
     align-items: center;
 
-    max-width: 710px;
+    max-width: 810px;
     height: 200px;
 }
-.box-1 .item-1 .title {
+.content .scroll-show .container .box-1 .item-1 .title {
     max-height: 200px;
     padding: 4px;
 }
-.box-1 .item-1 .title span {
+.content .scroll-show .container .box-1 .item-1 .title span {
     font-family: 'Silkscreen', sans-serif;
     font-size: 27px;
     color: rgb(94, 147, 255);
@@ -154,7 +197,7 @@ body {
     margin-bottom: 10px ;
 }
 
-.box-1 .item-1 .text {
+.content .scroll-show .container .box-1 .item-1 .text {
     flex: 1;
     text-align: center;
 
@@ -164,9 +207,9 @@ body {
     color: white;
     max-width: 500px;
     padding: 0 5px;
-    margin: 10px 20px 0 0;
+    margin: 10px 0 20px 0;
 }
-.box-1 .item-1 .button {
+.content .scroll-show .container .box-1 .item-1 .box-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -176,27 +219,218 @@ body {
     height: 80px;
 
 }
+.content .scroll-show .container .box-1 .item-1 .box-button .item {
+    position: relative;
+    max-height: 50px;
+    height: ;
+    padding: 3px;
+    border: px solid;
+    border-radius:  0 20px 0 20px;
+    overflow: hidden;
+}
+.content .scroll-show .container .box-1 .item-1 .box-button .item::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0;
 
-.box-1 .item-1 .button button:nth-child(1) {
+    height: 60%;
+    width: 120%;
+
+    transform: rotate(90deg) ;
+
+    background-color: rgb(65, 136, 241);
+    filter: blur(4px);
+
+    animation: decoration-rotate 2s 0.5s linear infinite;
+}
+
+.content .scroll-show .container .box-1 .item-1 .box-button button:nth-child(1) {
     color: white;
     
     padding: 10px;
-    max-height: 50px;
-    background:transparent;
-    border: 2px solid rgb(49,  138, 255);
+    width: 100%;
+    height: 100%;
+    background:rgb(83, 85, 88);
+    border: 0px solid rgb(58, 143, 255);
+    outline: 0;
     border-radius:  0 20px 0 20px;
     outline: 0;
 }
-.box-1 .item-1 .button button:nth-child(1):hover {
+.content .scroll-show .container .box-1 .item-1 .box-button button:nth-child(1):hover {
 
     background-color:rgb(49, 138, 255) ;
    
 }
 
-.container-1 {
-    width:100%;
-    height:100vh;
-    background-color:rgb(62, 64, 71);
+/*----- BOX_2 ------*/
+
+.content .scroll-show .container .box-2 {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+}
+.content .scroll-show .container .box-2::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    filter: blur(3px);
+    background-image: url(../../image/home/background-2.jfif);
+    background-size: cover;
+}
+
+.content .scroll-show .container .box-2 .item-1 {
+    border: px solid saddlebrown;
+ 
+    max-width: 600px ;
+}
+.content .scroll-show .container .box-2 .item-1 .title {
+    text-align: center;
+
+    font-size: 26px;
+    font-family:'Silkscreen';
+    color: rgb(94, 147, 255);
+
+}
+
+.content .scroll-show .container .box-2 .item-1 .box-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    height: 80px;
+    border: px solid;
+}
+.content .scroll-show .container .box-2 .item-1 .box-button .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 20%;
+    height: 30px;
+    background:rgb(62, 64, 77);
+    padding: 2px;
+    border: px solid;
+    outline: 0;
+
+}
+.content .scroll-show .container .box-2 .item-1 .box-button .item button {
+    position: relative;
+
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color: white;
+
+    width: 100%;
+    height: 100%;
+    background:rgb(62, 64, 77);
+    padding: 0 5px;
+    border: 0;
+    outline: 0;
+}
+
+.content .scroll-show .container .box-2 .item-1 .box-button .item button::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    width: 102%;
+    height: 30px;
+    background-color: rgb(84, 137, 243);
+}
+.content .scroll-show .container .box-2 .item-1 .box-button .item button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    
+    width: 30px;
+    height: 100%
+
+}
+/*----- [END] SCROLL-SHOW -----*/
+
+
+
+.content .container-1 {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(62, 64, 71);
+}
+
+.content .container-1 .box-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 15%;
+}
+.content .container-1 .box-1 h1{
+    animation: animation-zoom-out linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+
+    font-family: sans-serif;
+    color: rgb(192, 192, 192);
+}
+
+.content .container-1 .box-2 {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+}
+.content .container-1 .box-2 .radio-group {
+    align-self: center;
+    display: flex;
+    gap: 10px;
+
+    width: auto;
+    height: 40px;
+}
+.content .container-1 .box-2 .radio-group input {
+    display: none;
+}
+.content .container-1 .box-2 .radio-group label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: monospace;
+    font-size: 17px;
+    color: rgb(129, 129, 129);
+
+    width: 60px;
+    height: 40px;
+}
+.content .container-1 .box-2 .radio-group input:checked + .radio-label {
+    border-bottom: 4px solid rgb(0, 162, 255);
+    color: white;
 }
 
 
+.content .container-1 .box-2 .content-group {
+
+    margin: 10px ;
+    width: auto;
+    height: 75%;
+    border: 1px solid;
+}
