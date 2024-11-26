@@ -1,3 +1,12 @@
+# 🙇 About Me
+> [!IMPORTANT]
+> NOTE <br><br>
+> •  I am a programmer from Indonesia<br><br>
+> •  Coding It's my Hobby<br>
+#
+> [!NOTE]
+> Question <br><br>
+> 
 
 ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/ClavierIn) [![TikTok](https://img.shields.io/badge/TikTok-%23000000.svg?logo=TikTok&logoColor=white)](https://tiktok.com/@ClavierIn) 
