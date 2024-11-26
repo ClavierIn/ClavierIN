@@ -9,7 +9,6 @@
 - ⚡ Fun fact: I am 15 years old
 - 🙌 desire : want to master all programming languages 
 
-this is link to a web 
-https://clavierin.github.io/ClavierIN/
+
 
 
