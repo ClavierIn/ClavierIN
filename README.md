@@ -1,4 +1,9 @@
-# 🙇 About Me
+```python
+print("hey dear, i'm Calvin")
+```
+# Hey dear, i'm $${\color{lightblue}Calvin }$$
+
+##  🙇 About Me
 > [!IMPORTANT]
 > NOTE <br><br>
 > •  I am a programmer from Indonesia<br><br>
