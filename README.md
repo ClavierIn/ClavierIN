@@ -12,10 +12,12 @@
 
 ###
 > [!IMPORTANT]
-> I am 15 years old
+> 🌱 I am 15 years old
 > <br><br>
-> My goal : Full stack web devloper<br><br>
-> desire  : Master all coding languages
+
+> [🎯] My goal : Full stack web devloper<br><br>
+> [🙏] desire  : Master all coding languages<br><br>
+> [🐵] fun fact: I am 15 years old<br>
 
 ###
 
@@ -76,5 +78,15 @@
   <img width="15" />
   <img src="https://skillicons.dev/icons?i=tailwind" height="35" alt="tailwindcss logo"  />
 </div>
-
+<br>
 ###
+
+## Contact Me
+
+<div align="left">
+<img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="52" height="40" alt="instagram logo" />
+<img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" width="52" height="40" alt="gmail logo" />
+</div>
+
+
+
