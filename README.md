@@ -12,12 +12,12 @@
 
 ###
 > [!IMPORTANT]
-> 🌱 I am 15 years old
+> 🌱 I'm still learning
 > <br><br>
 
 > [🎯] My goal : Full stack web devloper<br><br>
 > [🙏] desire  : Master all coding languages<br><br>
-> [🐵] fun fact: I am 15 years old<br>
+> [🐵] fun fact: I am the real joker 👿<br>
 
 ###
 
