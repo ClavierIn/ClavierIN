@@ -21,8 +21,6 @@
 
 <a href="https://clavierin.github.io/ClavierIN/">See My First Website</a>
 
-<a href="https://clavierin.github.io/ClavierIn/web/Pages/Project/WEB/Chat_Bot_v1/index.html>Chat_Bot</a>
-
 ###
 
 
