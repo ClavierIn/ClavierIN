@@ -1,12 +1,33 @@
- <div class="nav">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="assets/css/home/style.css">
+
+     <link rel="stylesheet" href="assets/css/navbar/style.css">
+
+    <!---- REMIX ICON  ---->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!---- Google Font ---->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+
+   <div class="nav">
         <div class="bar">
-            <div class="box-enu">
+       
             <div class="box-menu" id="tm-menu">
                 <div class="line-1"></div>
                 <div class="line-2"></div>
                 <div class="line-3"></div>
             </div>
-            </div>
+          
             <div class="logo">
                 <span>CLAVIER</span>
             </div>
@@ -15,6 +36,7 @@
             <a href="#">Project</a>
             <a href="#">Learn</a>
             <a href="#">Tools</a>
+            <a href="#">Labs</a>
         </div>
             <div class="icon">
                 <div class="icon-search" id="search-button" onclick="openSearch(this)">
@@ -25,25 +47,29 @@
 
 
         <div class="scroll-indikator">   
-            <div class="indikator"></div>
+            <div class="indikator" id="scIndikator"></div>
         </div>
 
             <div class="menu" id="menu">
-                <span class="title">profil -</span>
-                <div class="cont-account">
-                    <div class="box-img">
-
-                    </div>
-                    <div class="box-username">
-                        <span>Clavier</span>
-                    </div>
-                    <div class="box-role">
-                        <span>user</span>
+                <div class="admin-pages" id="admin">
+                <span class="title">ADMIN - PAGES</span>
+                <div class="box-link">
+                    <div class="text">
+                    <object type="image/svg+xml" data="assets/icon/admin_panel.svg" width="20" height="20"></object>
+                    <span>ADMIN PANEL</span>
                     </div>
                 </div>
+                <div class="box-link">
+                    <div class="text">
+                    <object type="image/svg+xml" data="assets/icon/monitoring.svg" width="20" height="20"></object>
+                    <span>DASH BOARD</span>
+                    </div>
+                </div>
+                </div>
 
-            <span class="title">link -</span>
+                <span class="title">Pages -</span>
             <div class="cont-link">
+           
                 <div class="box-link">
                     <div class="text">
                     <object type="image/svg+xml" data="assets/icon/home.svg" width="20" height="20"></object>
@@ -51,9 +77,9 @@
                     </div>
 
                 </div>
-                <div class="box-link" ">
+                <div class="box-link" >
                     <div class="text">
-                        <object type="image/svg+xml" data="assets/icon/psychology.svg" width="20" height="20"></object>
+                        <object type="image/svg+xml" data="assets/icon/porfotolio.svg" width="20" height="20"></object>
                         <span>Porfotolio</span>
                     </div>
                 </div>
@@ -61,7 +87,7 @@
                     <div class="text">
                     <object type="image/svg+xml" data="assets/icon/dashboard_customize.svg" width="20" height="20"></object>              
                         <span>Project</span>
-                        <object class="arrow" type="image/svg+xml" data="assets/icon/chevron_right.svg" width="20" height="20"></object>
+                        <i class="ri-arrow-drop-right-line"></i>
                     </div>
                     <div class="drop-down " >
                         <span class="text">WEB</span>
@@ -73,11 +99,11 @@
                     </div>
                 </div>
              
-                <div class="box-link" onclick="dropDown(this)">
-                    <div class="text">
+                <div class="box-link" onclick="dropDown(this)" >
+                    <div class="text" id="closeDrop">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M96 0C43 0 0 43 0 96L0 416c0 53 43 96 96 96l288 0 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64c17.7 0 32-14.3 32-32l0-320c0-17.7-14.3-32-32-32L384 0 96 0zm0 384l256 0 0 64L96 448c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16zm16 48l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
                         <span>Learn</span>
-                        <object class="arrow" type="image/svg+xml" data="assets/icon/chevron_right.svg" width="20" height="20"></object>
+                        <i class="ri-arrow-drop-right-line"></i>
                     </div>
                     <div class="drop-down">
                         <span class="text">Coding</span>
@@ -90,7 +116,7 @@
                     <div class="text">
                     <object type="image/svg+xml" data="assets/icon/handyman.svg" width="20" height="20"></object>
                         <span>Tools</span>
-                        <object class="arrow" type="image/svg+xml" data="assets/icon/chevron_right.svg"  width="20" height="20"></object>
+                        <i class="ri-arrow-drop-right-line"></i>
                     </div>
                     <div class="drop-down">
                         <span class="text">sofware</span>
@@ -104,7 +130,7 @@
                     <div class="text">
                     <object type="image/svg+xml" data="assets/icon/quiz.svg" width="20" height="20"></object>
                         <span>Execrise</span>
-                        <object class="arrow" type="image/svg+xml" data="assets/icon/chevron_right.svg" width="20" height="20"></object>
+                        <i class="ri-arrow-drop-right-line"></i>
                     </div>
                     <div class="drop-down " >
                         <span class="text">Latihan coding</span>
@@ -186,9 +212,10 @@
                                 </div>
                             </ul>
                             <ul class="box">
-                                <span class="title">Web AI</span>
+                                <span class="title">Tools Web</span>
                                 <div class="text">
-                                    <span></span>
+                                   <li>REMIX icon</li>
+                                   <li>Goole Font</li>
                                 </div>
                             </ul>
                         </div>
@@ -197,3 +224,80 @@
             </div>
 
     <script src="assets/js/navbar/script.js"></script>
+
+  
+    <div class="content">
+    <div class="scroll-show ">
+
+    <button class=" fas fa arrow left-arrow" id="left-arrow"><i class="ri-arrow-left-s-fill"></i></button>
+  
+        <!-- Scrollable content container -->
+         <div class="container" id="scroll-container"> 
+            <div class="box box-1" >
+                <div class="item-1">
+                    <div class="title"><span>Mau punya web keren buat usaha kamu?</span></div>
+                    <div class="text">
+                        <p>
+                            Kami bantu bikin web yang gak cuman keren, tapi juga gampang di pake buat kamu. kami siap wujudkan desain impian kamu dengan performa maksimal
+                        </p>
+                    </div>
+                    <div class="box-button">
+                        <div class="item"><button>PESAN WEB YANG KAMU MAU</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box box-2">
+                <div class="item-1">
+                    <div class="title">Selain web kita bisa buat aplikasi kece buat kamu</div>
+                    <div class="text">
+                        <p></p>
+                    </div> 
+                    <div class="box-button">
+                        <div class="item"><button><i class="ri-add-line"></i>Pesan App</button></div>
+                        <div class="item"><button><i class="ri-dashboard-line"></i>Lihat Project kami</button></div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="box">npm create vite@latest admin</div>
+
+          
+            
+        </div>
+
+              <!-- Dots container, populated by JS -->
+        <div class="dots" id="dots"></div>
+  
+        <button class="arrow right-arrow" id="right-arrow"><i class="ri-arrow-right-s-fill"></i></button>
+      
+    </div>
+
+
+        <div class="container-1">
+            <div class="box-1">
+                <h1>Paket Pembuatan</h1>
+            </div>
+
+            <div class="box-2">
+                <div class="radio-group">
+                <input type="radio" name="pilihan" value="1" id="pilihan1" checked>
+                <label for="pilihan1"class="radio-label">WEB</label>
+
+                <input type="radio" name="pilihan" value="2" id="pilihan2">
+                <label for="pilihan2"class="radio-label">APP</label>
+                </div>
+
+                <div class="content-group">
+                    <div class="group-1"></div>
+                    <div class="group-2"></div>
+                </div>
+          
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="assets/js/home/script.js"></script>
+</body>
+</html>
