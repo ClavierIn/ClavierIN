@@ -100,3 +100,29 @@ document.addEventListener('DOMContentLoaded', () => {
       updateActiveDot();
   });
 });
+
+// container-1
+const scrollableDiv = document.getElementById('ScrollDiv');
+const scrollDistance = 60; // Jarak dari ujung div yang memicu scroll
+const scrollSpeed = 50; // Kecepatan scroll
+
+// Fungsi untuk menggulirkan div ke kiri atau kanan
+function autoScroll(event) {
+  const rect = scrollableDiv.getBoundingClientRect();
+  const mouseX = event.clientX;
+
+  // Menghitung jarak mouse dengan batas kiri dan kanan div
+  const distanceLeft = mouseX - rect.left;
+  const distanceRight = rect.right - mouseX;
+
+  if (distanceLeft < scrollDistance) {
+    // Scroll ke kiri
+    scrollableDiv.scrollLeft -= scrollSpeed;
+  } else if (distanceRight < scrollDistance) {
+    // Scroll ke kanan
+    scrollableDiv.scrollLeft += scrollSpeed;
+  }
+}
+
+// Menambahkan event listener untuk mendeteksi gerakan mouse
+scrollableDiv.addEventListener('mousemove', autoScroll);
