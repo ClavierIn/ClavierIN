@@ -438,7 +438,106 @@ body {
 }
 
 
+
+.content .container-1 .box-2 .content-group {
+    border: px solid white;
+    margin: 10px ;
+    width: auto;
+    height: 80%;
+    border-radius: 20px;
+}
+
+.content .container-1 .box-2 .content-group .group{
+    display: grid;
+    grid-template-columns: repeat(4, 33%);
+    align-items: center;
+    gap: 5px;
+
+
+    padding:0 15px;
+    width: 100%;
+    height: 80vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-align: start;
+}
+.content .container-1 .box-2 .content-group .group::-webkit-scrollbar {
+    height: 3px;
+}
+.content .container-1 .box-2 .content-group .group::-webkit-scrollbar-thumb {
+    background-color: rgb(70, 110, 221);
+}
+
+.content .container-1 .box-2 .content-group .group .item{
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 20px;
+    padding-left: 40px;
+    width: 290px;
+    height: 85%;
+    background-color: rgb(57, 58, 61);
+    border: px solid;
+    border-radius: 10px;
+}
+.content .container-1 .box-2 .content-group .group .item:hover{
+    scale: 1.1;
+    border: 1px solid white;
+}
+.content .container-1 .box-2 .content-group .group .item span {
+    font-size: 23px;
+    font-family: sans-serif;
+    color: white;
+
+    margin-bottom: px;
+
+}
+.content .container-1 .box-2 .content-group .group .item p {
+    font-size: 17px;
+    font-family:sans-serif;
+    color: gray;
+
+    margin: 10px 0;
+    margin-bottom: 20px;
+}
+.content .container-1 .box-2 .content-group .group .item ul {
+    list-style: none;
+    flex: 1;
+}
+.content .container-1 .box-2 .content-group .group .item ul li {
+    font-size: 14px;
+    font-family: sans-serif;
+    color: rgb(97, 97, 97);
+
+    margin-bottom: 13px;
+}
+.content .container-1 .box-2 .content-group .group .item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    font-family: sans-serif;
+    color: white;
+
+    height: 30px;
+    width: 80px;
+    background: linear-gradient(45deg,rgb(63, 128, 226) ,rgb(48, 83, 179),rgb(69, 70, 80));
+    border-radius: 0 10px 0 0;
+}
+
+
+.content .container-1 .box-2 .content-group .group-2 {
+    display: none;
+}
+
 /*--- MEDIA ---*/
+@media (max-width: 1002px){
+    .content .container-1 .box-2 .content-group .group{
+        grid-template-columns: repeat(4, 92%);
+    }
+}
+
 @media (max-width: 800px){
     .content .scroll-show .arrow {
         display: none;
