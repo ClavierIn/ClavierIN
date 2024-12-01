@@ -191,6 +191,7 @@ body {
     text-align: center;
     max-height: 200px;
     padding: 4px;
+    border:none;
 }
 .content .scroll-show .container .box-1 .item-1 .title span {
     font-family: 'Silkscreen', sans-serif;
@@ -198,6 +199,7 @@ body {
     color: rgb(94, 147, 255);
 
     margin-bottom: 10px ;
+    
 }
 
 .content .scroll-show .container .box-1 .item-1 .text {
@@ -434,13 +436,13 @@ body {
     margin: 10px ;
     width: auto;
     height: 75%;
-    border: 1px solid;
+    border: none;
 }
 
 
 
 .content .container-1 .box-2 .content-group {
-    border: px solid white;
+    border: none;
     margin: 10px ;
     width: auto;
     height: 80%;
