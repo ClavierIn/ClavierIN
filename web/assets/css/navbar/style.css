@@ -438,14 +438,15 @@ body {
 }
 
 .nav .menu .cont-link .box-link svg{
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     fill: white;
     color: white;
 }
 .nav .menu .cont-link .box-link .arrow {
     position: absolute;
     right: 10px;
+    display:none;
 }
 
 .nav .menu .cont-link .box-link .arrow.rotate {
