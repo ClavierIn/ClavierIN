@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok Penjualan</title>
+
+    <link rel="stylesheet" href="assets/style.css">
+  
+</head>
+<body>
+    <div class="content">
+    <div class="hide" onclick="toggleForm()">
+        <span >Hide</span>
+    </div>
+
+    <div class="form-container" id="form-container">
+        <h2>Manajemen Stok Bensin</h2>
+
+        <div class="box">
+        <!-- Form untuk menambah dua barang sekaligus -->
+        <label for="namaBarang1">Nama Barang 1:</label>
+        <input type="text" id="namaBarang1" placeholder="Bensin 1">
+
+        <label for="stokBarang1">Stok Barang 1:</label>
+        <input type="number" id="stokBarang1" min="0" value="1" placeholder="Stok Barang 1">
+
+        <label for="hargaBarang1">Harga Barang 1:</label>
+        <input type="number" id="hargaBarang1" min="0" value="15000" placeholder="Harga Barang 1">
+
+        </div>
+        <br><br>
+        <div class="box">
+        <label for="namaBarang2">Nama Barang 2:</label>
+        <input type="text" id="namaBarang2" placeholder="Bensin 2">
+
+        <label for="stokBarang2">Stok Barang 2:</label>
+        <input type="number" id="stokBarang2" min="0" value="1" placeholder="Stok Barang 2">
+
+        <label for="hargaBarang2">Harga Barang 2:</label>
+        <input type="number" id="hargaBarang2" min="0" value="20000" placeholder="Harga Barang 2">
+
+        <button onclick="tambahItem()">Tambah Barang</button>
+        </div>
+
+        <div class="result" id="hasil"></div>
+    </div>
+    
+    <h1>TABEL BENSIN</h1>
+
+    <div class="container-tabel">
+    <table id="tabelStok">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Bensin</th>
+                <th>Stok</th>
+                <th>Terjual</th>
+                <th>Harga</th>
+                <th>Total</th>
+                <th>Tanggal Masuk</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data stok barang akan muncul di sini -->
+        </tbody>
+    </table>
+    </div>
+    </div>
+
+    <script src="assets/script.js">
+     
+    </script>
+
+</body>
+</html>
