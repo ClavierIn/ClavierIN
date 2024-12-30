@@ -210,7 +210,7 @@ window.onmousemove = function(e){
                         <div class="content">
                             <h2>Konten Acak</h2>
                             <p>Konten Acak: Gambar berikut adalah contoh random dari internet.</p>
-                            <img src="https://via.placeholder.com/600x300/ff7f7f" alt="Random Gambar" />
+                           
                         </div>
                     `;
                     break;
