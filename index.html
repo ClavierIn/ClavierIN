@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <!-- styling link -->
+        <!-- local -->
+
+        <!-- navbar -->
+        <link rel="stylesheet" href="assets/css/navbar/navbar.css">
+        <link rel="stylesheet" href="assets/css/navbar/navbar-active.css">
+
+        <!-- main  -->
+        <link rel="stylesheet" href="assets/css/home/style.css">
+        <!-- Code Styling  -->
+        <link rel="stylesheet" href="assets/css/code/code.css">
+    <!-- Font -->
+        <!---- Google Font ---->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+
+    <!-- icon -->
+
+        <!---- remix icon----->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- [end] styling link -->
+
+    <!-- script link -->
+
+    <!-- [end] script link -->
+
+
+</head>
+<body>
+
+    <header id="header">
+        <nav id="navbar">
+        <div class="left">
+                <div id="button-menu"  onclick=" OpenMenu()">
+                    <div class="line-1"></div>
+                    <div class="line-2"></div>
+                    <div class="line-3"></div>
+                </div>
+                <div class="logo">
+                    <label>CLAVIER</label>
+                </div>
+            </div>
+            <div class="center">
+                <div class="link">
+                    <a href="#">Home</a>
+                    <a href="#">Project</a>
+                    <a href="#">Learn</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="icon" id="search-button" onclick="OpenSearch()">
+                    <div>
+                        <object type="image/svg+xml" data="assets/icon/search.svg"></object>
+                    </div>
+                 </div>
+
+                 <div class="icon" id="search-button" onclick="OpenAccount()">
+                    <div>
+                        <object type="image/svg+xml" data="assets/icon/account-circel.svg"></object>
+                    </div>
+                 </div>
+            </div>
+        </nav>
+
+        <div id="scroll-bo" class="scroll-box">
+            <div id="scroll-indikator"></div>
+        </div>
+
+        <div id="menu">
+            <span class="title">Pages-</span>
+            <div class="groups-link">
+                <div class="box-link">
+                    <div class="text"><span class="">Home</span></div>
+                </div>
+                <div class="box-link">
+                    <div class="text"><span class="">Service</span></div>
+                </div>
+                <div class="box-link">
+                    <div class="text"><span class="">Project</span></div>
+                </div>
+                <div class="box-link">
+                    <div class="text"><span class="">Learn</span></div>
+                </div>
+                <div class="box-link">
+                    <div class="text"><span class="">Tools</span></div>
+                </div>
+                <div class="box-link">
+                    <div class="text"><span class="">About</span></div>
+                </div>
+                <div class="box-link">
+                    <div class="text"><span class="">Contact</span></div>
+                </div>
+            </div>
+            <div class="box-bahasa" id="box-bahasa">
+                <input type="radio" name="language" value="indonesia" id="pilihan1" checked>
+                <label for="pilihan1"class="radio-label">IND</label>
+
+                <input type="radio" name="language" value="english" id="pilihan2">
+                <label for="pilihan2"class="radio-label">ENG</label>
+            </div>
+        </div>
+
+        <div id="search">
+            <span class="title">Search</span>
+            <div class="box-1">
+                <div class="box-input">
+                    <input type="text" id="search-input" maxlength="50" placeholder="Cari..." onkeyup="search()">
+                </div>
+            </div>
+            <span class="title">output:</span>
+            <div class="box-2">
+                <div class="box-output" id="search-list-item">
+                  <div class="item"></div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main id="content">
+        <section class="container-1"> 
+        <div  id="scroll-show">
+            <div class="page page-1">
+                <div class="background" id="scroll-show-page-1-background">
+
+                </div>
+                <div class="box-item">
+                    <span class="text" id="container-1-page-1-title"></span>
+                    <p id="container-1-page-1-paragraf"></p>
+                </div>
+            </div>
+
+            <div class="page page-2">
+                <div class="box-item">
+                    <h2 class="text">Pelajari Berbagai Bahasa Pemograman</h2>
+                    <p>Pelajari coding itu penting banget, terutama di zaman sekarang. Dengan coding, kamu bisa bikin website, aplikasi, bahkan solusi buat masalah sehari-hari.</p>
+                    
+                <div class="item-button">
+                    <a href="#"><button>Mulai Belajar</button></a>
+                    <a href="https://roadmap.sh/0" target="_blank"><button><i class="ri-road-map-line"></i> Road Map</button></a>
+                </div>
+                </div>
+
+                </div>
+
+            <div class="page page-3">
+                <div class="box-item">
+                    <span> id</span>
+                   </div>
+            </div>
+
+                <div class="control">
+                    <i class="arrow arrow-left" id="scrollShow-left-arrow"><</i>
+                    <div class="dots-groups" id="scrollShow-groups-dots">
+                    </div>
+                    <i class="arrow arrow-right" id="scrollShow-right-arrow">></i>
+                </div>
+              
+            </div> 
+        </section>
+        <section class="container-2">
+            <div id="scroll-content">
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+    
+    <!-- Navbar java script -->
+     <script src="assets/js/navbar/script.js" ></script>
+     <script src="assets/js/navbar/search-engine.js"></script>
+     <script src="assets/js/home/language.js"></script>
+
+     <!-- home script -->
+      <script src="assets/js/home/main.js"></script>
+      <script src="assets/js/home/script.js"></script>
+</body>
+</html>
