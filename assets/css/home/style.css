@@ -544,7 +544,8 @@ height: 100vh;
     border-radius: 10px;   
 }
 #scroll-content .content-2 .container-1 .box-item .item h3 {
-    color: white;
+    color: rgb(235, 235, 235);
+
 }
 
 #scroll-content .content-2 .container-1 .box-item  .item .text {
@@ -553,7 +554,7 @@ height: 100vh;
 #scroll-content .content-2 .container-1 .box-item .item .text p {
     font-family: monospace;
     font-size: 14px;
-    color: rgb(192, 192, 192);
+    color: rgb(150, 150, 150);
 
     margin-right: 20px;
     max-width: 90%;
@@ -562,7 +563,7 @@ height: 100vh;
     display: flex;
     align-items: center;
 
-    color: white;
+    color: rgb(172, 172, 172);
 
     width: 55px;
     height: 100%;
@@ -572,6 +573,7 @@ height: 100vh;
 
 
 @media (max-width:1110px){
+
 
     #scroll-show .page-2 {
         width: 100%;
@@ -601,5 +603,11 @@ height: 100vh;
     }
     #scroll-content .container-2 .container-1 .box-item .item {
         width:100%;
+    }
+}
+
+@media (max-width: 900px){
+    #scroll-content .content-1 .page-1 .box-2 .content-group .group {
+       grid-template-columns: repeat(4, 90%);
     }
 }
