@@ -180,10 +180,8 @@ window.onmousemove = function(e){
                                 </div>
 
                                 <div class="item">
-                                    <span class="icon" style="background: rgb(224, 143, 77);">
-                                    <svg class="h-6 w-6 stroke-white" fill="none" viewBox="0 0 24 24" stroke="currentcolor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657.0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657.0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
-                                    </path></svg>
+                                    <span class="icon" style="background:rgb(108, 152, 235);">
+                                    <svg class="h-6 w-6 stroke-white" fill="none" viewBox="0 0 24 24" stroke="currentcolor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                                     </span>
                                     <h3 class="">Web Programming</h3>
                                   
