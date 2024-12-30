@@ -1,0 +1,56 @@
+/* function NavScrollFunction  */
+#header.active #navbar {
+    background-color: var(--nav-background-color);
+    backdrop-filter: blur(5px);
+}
+#header.active #navbar .center .link a {
+    position: relative;
+    border-radius: 0;
+}
+#header.active #navbar .center .link a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 0%;
+    height: 3px;
+    background-color: var(--nav-main-color);
+
+    transition: 0.5s;
+}
+#header.active #navbar .center .link a:hover{
+    background: none;
+
+}
+
+#header.active #navbar .center .link a:hover::before {
+    width: 100%;
+}
+
+#header.active #scroll-box {
+    opacity: 1;
+}
+
+/* funtion OpenMenu */
+#button-menu.clicked {
+   position: relative;
+}
+#button-menu.clicked .line-1 {
+    position: absolute;
+    transform: rotate(55deg);
+    width: 20px;
+}
+#button-menu.clicked .line-2 {
+    display: none;
+}
+#button-menu.clicked .line-3 {
+    transform: rotate(-55deg);
+    width: 20px;
+}
+
+
+/* Function OpenSearch */
+#search.active {
+    right: 4px;
+}
