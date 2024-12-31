@@ -57,7 +57,58 @@ window.onmousemove = function(e){
                 case 0:
                     contentDisplay.innerHTML = `
                         <div class="content-1">
-                        <div class="page-1">
+                        <div class="container-1">
+                            <div class="box-title">
+                                <h1 class="title">FULL <b> SERVICE </b> DIGITAL SOLUTION</h1>
+                                <p>Layanan Menunjang Transformasi Bisnis Anda di Era Digital.</p>
+                            </div>
+
+                            <div class="box-item">
+
+                                <div class="item">
+                                    <i></i>
+
+                                    <span>Websites & mobile App</span>
+
+                                    <p> kembangakna usaha kamu</p>
+
+                                    <ul>
+                                    <li>Desing Web</li>
+                                    <li>Optimize Web</li>
+                                    </ul>
+                                </div>
+
+                                  <div class="item">
+                                    <i></i>
+
+                                    <span>Websites & mobile App</span>
+
+                                    <p> kembangakna usaha kamu</p>
+
+                                    <ul>
+                                    <li>Desing Web</li>
+                                    <li>Optimize Web</li>
+                                    </ul>
+                                </div>
+
+                              <div class="item">
+                                    <i></i>
+
+                                    <span>Websites & mobile App</span>
+
+                                    <p> kembangakna usaha kamu</p>
+
+                                    <ul>
+                                    <li>Desing Web</li>
+                                    <li>Optimize Web</li>
+                                    </ul>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        <div class="container-2">
                         <div class="box-title">
                              <h1>Paket Pembuatan</h1>
                           </div>
@@ -126,6 +177,8 @@ window.onmousemove = function(e){
                 </div>
                 </div>
             </div>
+
+
         </div>
                     `;
                     break;
