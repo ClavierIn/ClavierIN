@@ -62,9 +62,11 @@ body {
 /*-------- [start] scroll-show -------*/
 #content .container-1 {
     position: relative;
+    z-index: 10;
 }
 /* scroll show page setup */
 #content #scroll-show{
+
 
 display: grid;
 grid-template-columns: repeat(3, 100%);
@@ -79,8 +81,8 @@ height: 100vh;
 }
 #content #scroll-show::-webkit-scrollbar {
     height:4px;
-    background-color: rgb(80, 80, 80);
-    background: none;
+    background-color: rgb(54, 54, 54);
+    background: ;
 }
 
 #content #scroll-show::-webkit-scrollbar-thumb {
@@ -158,7 +160,8 @@ height: 100vh;
     justify-content: center;
     align-items: center;
 
-    padding:25px;
+
+
     /* background-color: rgb(34, 35, 46); */
 
 }
@@ -196,7 +199,7 @@ height: 100vh;
 #scroll-show .page-1 .box-item .text {
 
     font-family: monospace;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 35px;
     color: var(--nav-main-color);
 
@@ -228,12 +231,30 @@ height: 100vh;
 /* page-1 */
 
 /* box-title */
+#scroll-content .content-1 .container-1::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    scale: 2;
+    filter: blur(2px);
+
+    background-image: url('../../../src/img/home/background/background-doodle-1.jpg');
+}
 #scroll-content .content-1 .container-1{
     position: relative;
+    z-index: 2;
 
     width: 100%;
     height: ;
-    background-color: rgb(31, 31, 32);
+    background-color: rgb(36, 36, 36);
+
+    overflow: hidden;
 }
 #scroll-content .content-1 .container-1 .box-title {
     display: flex;
@@ -260,28 +281,94 @@ height: 100vh;
 /* box-item */
 #scroll-content .content-1 .container-1 .box-item{
     display: flex;
+    flex-direction: ;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 
-    padding: 0 40px;
+    padding: 20px 40px;
     width: 100%;
     height: 60vh;
 }
 
 #scroll-content .content-1 .container-1 .box-item .item{
-    width: 25%;
-    height: 80%;
-    background-color: rgb(56, 56, 61);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+    gap: 6px;
+    padding: 20px;
+    width: 20%;
+    min-height: 50vh;
+
+    background-color: rgb(55, 55, 59);
+    border-radius: 20px;
 }
 
+#scroll-content .content-1 .container-1 .box-item .item .icon{
+    width: 150px;
+    height:150px;
+}
+
+#scroll-content .content-1 .container-1 .box-item .item .text {
+    font-size: 25px;
+    color: gray;
+
+    width: 80%;
+}
+#scroll-content .content-1 .container-1 .box-item .item .paragraf {
+    color: rgb(92, 91, 91);
+}
+#scroll-content .content-1 .container-1 .box-item .item .box-list {
+    padding: 2px;
+    border: px solid;
+}
+#scroll-content .content-1 .container-1 .box-item .item .box-list li {
+    display: flex;
+    align-items: center;
+
+    color: gray;
+
+    margin: 10px 0;
+}
+#scroll-content .content-1 .container-1 .box-item .item .box-list li i{
+    font-size: 20px;
+    font-weight: 900;
+    color: gray;
+
+    padding: 2px;
+    margin-right: 10px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+#scroll-content .content-1 .container-1 .box-item .item .box-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px;
+    width: 100%;
+    height: 50px;
+}
+#scroll-content .content-1 .container-1 .box-item .item .box-button button {
+    color: whitesmoke;
+
+    padding: 8px 5px;
+    width: 90%;
+    background-color: var(--nav-main-color);
+    border:0;
+    border-radius: 5px;
+}
 /* page-2 */
+
 #scroll-content .content-1  .container-2{
     position: relative;
+    z-index: 2;
 
     width: 100%;
     height: 110vh;
-    background-color:  rgb(35, 35, 37);
+    background-color:  rgb(32, 32, 34);
 }
 #scroll-content .content-1 .container-2 .box-item {
     text-align: center;
@@ -297,10 +384,21 @@ height: 100vh;
     height: 20%;
 
 }
+
+
 #scroll-content .content-1 .container-2 .box-title h1{
+    position: relative;
+    z-index: 1;
     font-size: 30px;
     font-family: sans-serif;
-    color: rgb(192, 192, 192);
+    /* color: rgb(192, 192, 192); */
+    color: transparent;
+
+    padding: 5px;
+    background: linear-gradient(90deg, rgb(0, 89, 255), rgb(105, 145, 233));
+    background-clip: text;
+    border: 2px solid rgb(87, 144, 230);
+    border-radius: 5px;
 
     animation: animation-zoom-out 3s linear;
     animation-timeline: view();
@@ -619,6 +717,11 @@ height: 100vh;
 /* [end] scroll-content/content-2 */
 /* [end] page-2 */
 
+@media (max-width:1200px){
+    #scroll-content .content-1 .container-1 .box-item .item {
+        width: 600px;
+    }
+}
 
 @media (max-width:1110px){
 
@@ -655,6 +758,11 @@ height: 100vh;
 }
 
 @media (max-width: 900px){
+    #scroll-content .content-1 .container-1 .box-item .item {
+        width: 80%;
+        scale: 0.9;
+    }
+
     #content #scroll-show {
         height: 97vh;
     }
@@ -663,7 +771,15 @@ height: 100vh;
        grid-template-columns: repeat(4, 90%);
     }
 }
-
+@media (max-width:650px) {
+    #scroll-content .content-1 .container-1 .box-item {
+        flex-direction: column;
+        height: auto;
+    }
+    #scroll-content .content-1 .container-1 .box-item .item {
+        width: 100%;
+    }
+}
 @media (max-width:440px) {
     #content #scroll-show {
         height: 95vh;
