@@ -66,42 +66,55 @@ window.onmousemove = function(e){
                             <div class="box-item">
 
                                 <div class="item">
-                                    <i></i>
+                                    <img class="icon" src="assets/icon/Pc&Mobile.png"></img>
 
-                                    <span>Websites & mobile App</span>
+                                    <span class="text">Websites & mobile App</span>
 
-                                    <p> kembangakna usaha kamu</p>
+                                    <p class="paragraf"> kembangakna usaha kamu</p>
 
-                                    <ul>
-                                    <li>Desing Web</li>
-                                    <li>Optimize Web</li>
+                                    <ul class="box-list">
+                                    <li><i class="ri-check-line"></i>Desing Web</li>
+                                    <li><i class="ri-check-line"></i>Optimize Web</li>
                                     </ul>
+
+                                    
+                                    <div class="box-button">
+                                    <button class="" type="button">Hubungi Kami</button>
+                                    </div>
                                 </div>
 
                                   <div class="item">
-                                    <i></i>
+                                    <img class="icon" src="assets/icon/Branding&Content.png"></img>
 
-                                    <span>Websites & mobile App</span>
+                                    <span class="text">Branding & Content Creative</span>
 
-                                    <p> kembangakna usaha kamu</p>
+                                    <p class="paragraf"> kembangakna usaha kamu</p>
 
-                                    <ul>
-                                    <li>Desing Web</li>
-                                    <li>Optimize Web</li>
+                                    <ul class="box-list">
+                                    <li><i class="ri-check-line"></i>Desing Web</li>
+                                    <li><i class="ri-check-line"></i>Optimize Web</li>
                                     </ul>
+
+                                    <div class="box-button">
+                                    <button class="" type="button">Hubungi Kami</button>
+                                    </div>
                                 </div>
 
                               <div class="item">
-                                    <i></i>
+                                    <img class="icon" src="assets/icon/Digital-marketing.png"></img>
 
-                                    <span>Websites & mobile App</span>
+                                    <span class="text">Websites & mobile App</span>
 
-                                    <p> kembangakna usaha kamu</p>
+                                    <p class="paragraf"> kembangakna usaha kamu</p>
 
-                                    <ul>
-                                    <li>Desing Web</li>
-                                    <li>Optimize Web</li>
+                                    <ul class="box-list">
+                                    <li><i class="ri-check-line"></i>Desing Web</li>
+                                    <li><i class="ri-check-line"></i>Optimize Web</li>
                                     </ul>
+ 
+                                    <div class="box-button">
+                                    <button class="" type="button">Hubungi Kami</button>
+                                    </div>
                                 </div>
 
 
@@ -123,7 +136,7 @@ window.onmousemove = function(e){
                 </div>
 
                 <div class="content-group">
-                    <div class=" group group-1" id="ScrollDiv" >
+                    <div class=" group group-1" id="card-paket-web" >
                         <div class=" item">
                             <span>Paket Standar</span>
                             <p>Buat usaha kecil dan penggunaan pribadi yang ingin tampil online</p>
