@@ -4,7 +4,7 @@
 
 <h1 align="left">Hey Dear</h1>
 
-<p align="left">My name it's Calvin, I'am Full stack devloper, designer, moderator./p>
+<p align="left">My name it's Calvin, I'am Full stack devloper, designer & moderator./p>
 
 ###
 
