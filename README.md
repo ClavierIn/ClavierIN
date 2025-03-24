@@ -33,11 +33,12 @@
 
 ###
 
-<h2 align="left">I code with</h2>
+<h2 align="left">My skill..</h2>
 
 ###
 <p>GAME DEV</p>
-[![My Skills](https://skillicons.dev/icons?i=godot,unity,unreal,blender)](https://skillicons.dev)
+
+[![My Skills](https://skillicons.dev/icons?i=godot,unity,unreal,blender,lua)](https://skillicons.dev)
 
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="35" alt="javascript logo"  />
