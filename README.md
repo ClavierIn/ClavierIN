@@ -76,20 +76,19 @@ keep learning!!
 <p>APP DEV</p>
 
 ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![Ionic](https://img.shields.io/badge/Ionic-%233880FF.svg?style=for-the-badge&logo=Ionic&logoColor=white) ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-<div>
+![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) <div>
   <img width="15" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" height="35" alt="androidstudio logo"  />
 </div>
   
 <p>GAME DEV</p>
 
-[![My Skills](https://skillicons.dev/icons?i=godot,unity,unreal,blender,lua,cpp)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=godot,unity,unreal,blender,lua,cpp,python)](https://skillicons.dev)
 
 <p>Others</p>
 <div>
    
-[![My Skills](https://skillicons.dev/icons?i=c,cs,cpp,bash,kali)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=python,c,cs,cpp,bash,kali)](https://skillicons.dev)
 
 </div
 
