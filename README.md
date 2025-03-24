@@ -85,6 +85,8 @@
 
 <p>Others</p>
 <div>
+   
+[![My Skills](https://skillicons.dev/icons?i=c,cs,cpp,bash,kali)](https://skillicons.dev)
 
 </div
 
