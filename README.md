@@ -38,7 +38,7 @@
 ###
 <p>GAME DEV</p>
 
-[![My Skills](https://skillicons.dev/icons?i=godot,unity,unreal,blender,lua)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=godot,unity,unreal,blender,lua,cpp)](https://skillicons.dev)
 
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="35" alt="javascript logo"  />
