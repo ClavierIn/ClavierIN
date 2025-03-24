@@ -79,6 +79,8 @@
   <img src="https://skillicons.dev/icons?i=powershell" height="35" alt="powershell logo"  />
   <img width="15" />
   <img src="https://skillicons.dev/icons?i=tailwind" height="35" alt="tailwindcss logo"  />
+
+   [![My Skills](https://skillicons.dev/icons?i=js,html,css,wasm)](https://skillicons.dev)
 </div>
 <br>
 
