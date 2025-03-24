@@ -17,7 +17,7 @@
 
 > [🎯] My goal : Full stack web devloper<br><br>
 > [🙏] desire  : Master all coding languages<br><br>
-> [🐵] fun fact: I am the real joker 👿<br>
+> [🐵] fun fact: I am 14 years old<br>
 
 <a href="https://clavierin.github.io/ClavierIN/">See My First Website</a>
 
