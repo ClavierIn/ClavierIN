@@ -96,13 +96,6 @@
 <div align="left">
 <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="52" height="40" alt="instagram logo" />
 <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" width="52" height="40" alt="gmail logo" />
- <img width="15" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="35" alt="linux logo"  />
-   <img width="15" />
-  <img src="https://skillicons.dev/icons?i=java" height="35" alt="java logo"  />
-  <img width="15" />
-  <img src="https://skillicons.dev/icons?i=powershell" height="35" alt="powershell logo"  />
-  <img width="15" />
 </div>
 
 
