@@ -36,7 +36,8 @@
 <h2 align="left">I code with</h2>
 
 ###
-[![My Skills](https://skillicons.dev/icons?i=Godot,blender,,wasm)](https://skillicons.dev)
+<p>GAME DEV</p>
+[![My Skills](https://skillicons.dev/icons?i=godot,unity,unreal,blender)](https://skillicons.dev)
 
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="35" alt="javascript logo"  />
