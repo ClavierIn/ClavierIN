@@ -4,7 +4,7 @@
 
 <h1 align="left">Hey Dear</h1>
 
-<p align="left">My name is Calvin and I'm a student, from indonesia</p>
+<p align="left">My name it's Calvin, I'am Full stack devloper, designer, moderator./p>
 
 ###
 
@@ -12,12 +12,15 @@
 
 ###
 > [!IMPORTANT]
-> 🌱 I'm still learning
+> I'm from Indonesia 
+> 
 > <br><br>
 
-> [🎯] My goal : Full stack web devloper<br><br>
+> [🎯] My goal : learn all programming languages <br><br>
 > [🙏] desire  : Master all coding languages<br><br>
 > [🐵] fun fact: I am 14 years old<br>
+
+keep learning!!
 
 <a href="https://clavierin.github.io/ClavierIN/">See My First Website</a>
 
