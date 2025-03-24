@@ -80,7 +80,7 @@
   <img width="15" />
   <img src="https://skillicons.dev/icons?i=tailwind" height="35" alt="tailwindcss logo"  />
 
-   [![My Skills](https://skillicons.dev/icons?i=nodejs,laravel,monggodb,wasm)](https://skillicons.dev)
+   [![My Skills](https://skillicons.dev/icons?i=nodejs,laravel,mongodb,postgres)](https://skillicons.dev)
 </div>
 <br>
 
