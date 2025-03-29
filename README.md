@@ -1,5 +1,4 @@
 ```python
-   print("We are Legion")
    print("Hey [] Dear");
 ```
 
